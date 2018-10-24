@@ -18,6 +18,7 @@
 	<form method="post">
 		<input type="text" name="idNumber" placeholder="ID Number">
 		<input type="text" name="penName" placeholder="Pen Name">
+		<input type="text" name="wishList" placeholder="Wishlist">
 		<input type="submit" name="login" class="login login-submit" value="Submit">
 	</form>
 </body>
