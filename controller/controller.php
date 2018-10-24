@@ -10,7 +10,8 @@
             if($loginSql)
                 header('Location:raffle.html');
             else
-                alert('Invalid userID / pen name');
+                window.alert('Invalid userID / pen name');
+                header('Location:index.php');
         }
     }
 ?>
