@@ -20,6 +20,7 @@
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,5 +35,24 @@
         <input type="text" name="user" id="" placeholder="user">
         <input type="submit" name="add" value="Add">
     </form>
+    <?php
+        require 'controller/config.php';
+        $sql = mysqli_query($db,"SELECT userid,pen_name,wishlist,status FROM tbl_users");
+        echo '
+             <table>
+                <tr>
+                    <th>ID NUMBER</th>
+                </tr>
+            ';
+        while($row = mysqli_fetch_array($sql))
+        {
+            echo '
+                    <tr>
+                        <td>'.$row['userid'].'</td>
+                    </tr>
+            ';
+        }
+        echo '</table>';
+    ?>
 </body>
 </html>
