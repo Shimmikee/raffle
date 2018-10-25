@@ -10,7 +10,6 @@
             if(empty($idNumber) && empty($penName) && empty($wishList))
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
-                header('Location:index.php');
             }
             else
             {
@@ -41,17 +40,7 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
-                    echo '<script type="text/javascript">
-                            $(document).ready(function(){
-                                var x = document.getElementById("activate");
-                                if(x.style.display == "none")
-                                {
-                                    x.style.display = "block";
-                                } else {
-                                    x.style.display = "none";
-                                }
-                            });
-                    </script>';
+                    echo '<script src="../script.js"></script>';
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
