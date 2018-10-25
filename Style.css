@@ -109,11 +109,7 @@ body {
 
 #activate
 {
-<<<<<<< HEAD
-	display:none;
-=======
-	display:block;
->>>>>>> 9c3f530ecb17a98704fcb5ac8929bb143de4eea0
+	display: none;
 }
 
 /* Raffle Page */
