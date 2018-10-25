@@ -15,7 +15,6 @@
 		<h1>Christmas Celebration</h1>
 		<h2>Register now!</h2>
 	<?php 
-		checkID();
 		eRegister(); 
 	?>
 	<form method="post">
@@ -28,6 +27,29 @@
 		</div>
 		<input type="submit" name="login" class="login login-submit" value="Submit">
 	</form>
-	
+	<?php
+		require 'controller/config.php';
+        if(isset($_POST['checkID']))
+        {
+            $idNumber = $_POST['idNumber'];
+            if(empty($idNumber))
+            {
+                echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
+            }
+            else
+            {
+                $loginQuery = "SELECT * FROM tbl_users WHERE userid = '$idNumber' ";
+                $loginSql = mysqli_query($db,$loginQuery);
+                if($row = mysqli_fetch_array($loginSql))
+                {
+                    //echo '<script type="text/javascript">window.alert("TEST")</script>';
+                    echo '<script src="../script.js"></script>';
+                }else
+                {
+                    echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
+                }
+            }   
+        }
+	?>
 </body>
 </html>
