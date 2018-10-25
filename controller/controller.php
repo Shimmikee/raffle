@@ -46,7 +46,7 @@
                 }
                 else
                 {
-                    echo '<script type="text/javascript">window.alert("your account is inactive")</script>';
+                    echo '<script type="text/javascript">window.alert("Account is inactive. Please register first.")</script>';
                 }
             }
         }
