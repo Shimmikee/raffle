@@ -3,7 +3,7 @@
     if(isset($_POST['add']))
     {
         $idNumber = $_POST['user'];
-        $checkRow = mysqli_query($db,"SELECT * FROM tbl_users WHERE userid = '$idNumber'");
+        $checkRow = mysqli_query($db,"SELECT userid FROM tbl_users WHERE userid = '$idNumber'");
         $rows = mysqli_fetch_array($checkRow);
         if(empty($idNumber))
         {
