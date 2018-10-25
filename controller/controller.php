@@ -36,12 +36,12 @@
             }
             else
             {
-                $loginQuery = "SELECT userid,pen_name,wishlist,status FROM tbl_users WHERE userid = '$idNumber' ";
+                $loginQuery = "SELECT * FROM tbl_users WHERE userid = '$idNumber' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
-                    echo '<script type="text/javascript">window.alert("TEST")</script>';
-                    // echo '<script src="../script.js"></script>';
+                    //echo '<script type="text/javascript">window.alert("TEST")</script>';
+                    echo '<script src="../script.js"></script>';
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
