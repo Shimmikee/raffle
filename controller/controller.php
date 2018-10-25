@@ -2,7 +2,7 @@
     function eRegister()
     {
         require 'config.php';
-        if(isset($_POST['login']))
+        if(isset($_POST['register']))
         {
             $idNumber = $_POST['idNumber'];
             $penName = $_POST['penName'];
@@ -21,6 +21,34 @@
                 }
             }
                 
+        }
+    }
+
+    function eLogin()
+    {
+        require 'config.php';
+        if(isset($_POST['login']))
+        {
+            $idNumber = $_POST['idNumber'];
+            $penName = $_POST['penName'];
+            $wishList = $_POST['wishList'];
+            if(empty($idNumber) && empty($penName) && empty($wishList))
+            {
+                echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
+            }
+            else
+            {
+                $loginQuery = "SELECT userid,pen_name,wishlist,status FROM tbl_users WHERE userid = '$idNumber' AND status = '1' ";
+                $loginSql = mysqli_query($db,$loginQuery);
+                if($row = mysqli_fetch_array($loginSql))
+                {
+                    echo '<script type="text/javascript">window.alert("Done")</script>';
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("your account is inactive")</script>';
+                }
+            }
         }
     }
 ?>
