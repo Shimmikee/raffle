@@ -31,7 +31,7 @@
         else
         {
             $delUser = "DELETE FROM tbl_users WHERE userid = '$idNumber' ";
-            $quer = mysqli_query($db,$inserUser);
+            $quer = mysqli_query($db,$delUser);
             echo '<script type="text/javascript">window.alert("PAG NADELETE NA WAG NA HANAPIN!")</script>';
         }
     }
