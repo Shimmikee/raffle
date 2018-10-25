@@ -1,4 +1,3 @@
-$(document).ready(function(){
     var x = document.getElementById("activate");
     if(x.style.display == "none")
     {
@@ -6,4 +5,3 @@ $(document).ready(function(){
     } else {
         x.style.display = "none";
     }
-});
