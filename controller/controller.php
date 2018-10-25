@@ -1,5 +1,5 @@
 <?php
-    function eLogin()
+    function eRegister()
     {
         require 'config.php';
         if(isset($_POST['login']))
@@ -18,15 +18,7 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
-                    echo '<script type="text/javascript">
-                            var x = document.getElementById("activate");
-                            if(x.style.display == "none")
-                            {
-                                x.style.display = "block";
-                            } else {
-                                x.style.display = "none";
-                            }
-                    </script>';
+                    echo '<script type="text/javascript">window.alert("Done")</script>';
                 }
             }
                 
