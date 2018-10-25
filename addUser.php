@@ -21,6 +21,21 @@
         }
     }
 
+    if(isset($_POST['del']))
+    {
+        $idNumber = $_POST['user'];
+        if(empty($idNumber))
+        {
+            echo '<script type="text/javascript">window.alert("Lagyan mo kaya ng LAMAN!")</script>';
+        }
+        else
+        {
+            $delUser = "DELETE FROM tbl_users WHERE userid = '$idNumber' ";
+            $quer = mysqli_query($db,$inserUser);
+            echo '<script type="text/javascript">window.alert("PAG NADELETE NA WAG NA HANAPIN!")</script>';
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +49,7 @@
     <form method="post" action="addUser.php">
         <input type="text" name="user" id="" placeholder="user">
         <input type="submit" name="add" value="Add">
+        <input type="submit" name="del" value="Delete">
     </form>
     <?php
         require 'controller/config.php';
