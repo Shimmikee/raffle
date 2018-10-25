@@ -51,11 +51,6 @@
 </div>
 
 <script>
-
-function myFunction() {
-    alert();
-
-}
 </script>
 
 </body>
