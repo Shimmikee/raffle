@@ -76,6 +76,7 @@ body {
 	color: #fff;
 	text-shadow: 0 1px rgba(0,0,0,0.1);
 	background-color: #728C00;
+	margin-top: 40px;
 }
 
 .login-submit:hover {
