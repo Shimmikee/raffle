@@ -6,15 +6,15 @@
 <style>
 
 .raffleResult {
+    display: block;
 	padding: 10px;
     width: 270px;
     height: 150px;
 	background-color: #EDC9AF;
 	margin: auto;
 	margin-top: 200px;
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
 	overflow: hidden;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 .raffleResult h1 {
@@ -45,12 +45,16 @@
     </div>
 </div>
 
-
+<div id="activate" style="display:none;">
 <div class="raffleResult">
 		<h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1>
 </div>
+</div>
 
 <script>
+    function myFunction(){
+        document.getElementById("activate").style.display = "block";
+    }
 
 </script>
 
