@@ -43,7 +43,7 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
-                    echo '<script type="text/javascript">window.alert("Done")</script>';
+                    header("Location:raffle.php");
                 }
                 else
                 {
