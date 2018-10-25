@@ -47,7 +47,8 @@
 
 <div id="activate" style="display:none;">
 <div class="raffleResult">
-		<h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1>
+    <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1>
+    <!-- Syntax for random select then show results -->
 </div>
 </div>
 
