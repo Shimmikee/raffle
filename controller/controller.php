@@ -40,7 +40,8 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
-                    echo '<script src="../script.js"></script>';
+                    echo '<script type="text/javascript">window.alert("TEST")</script>';
+                    // echo '<script src="../script.js"></script>';
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
