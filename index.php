@@ -20,20 +20,14 @@
 	?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber" placeholder="ID Number">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" onclick="myFunction()" type="submit" name="checkID" class="login login-submit" value="Check">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="Check">
 		<div id="activate" style="display:none;">
 			<input type="text" name="penName" placeholder="Pen Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
 			<textarea style="resize:none; font-family: Verdana, sans-serif; padding: 6px; font-size: 16px;"  name="wishList" id="" cols="27" rows="10" placeholder="Wishlist (Ex. Item1, Item2, Item3...)"></textarea>
+			<input id="submit" type="submit" name="login" class="login login-submit" value="Submit"> 
 		</div>
-		<input id="submit" type="submit" name="login" class="login login-submit" value="Submit" disabled>
 	</form>
-
-<script>
-	function myFunction() {
-		document.getElementById("submit").disabled = false;
-	}
-</script>
 
 	<?php
 		require 'controller/config.php';
