@@ -41,15 +41,7 @@
                 if($row = mysqli_fetch_array($loginSql))
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
-                    echo '<script>
-                        var x = document.getElementById("activate");
-                        if(x.style.display == "none")
-                        {
-                            x.style.display = "block";
-                        } else {
-                            x.style.display = "none";
-                        }
-                    </script>';
+                    echo '<script src="../script.js"></script>';
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
