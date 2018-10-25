@@ -30,6 +30,7 @@
 		</div>
 		<input type="submit" name="entryLogin" class="login login-entry" value="Login">
 	</form>
+	</div>
 
 	<?php
 		require 'controller/config.php';
