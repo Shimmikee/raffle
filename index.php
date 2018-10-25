@@ -43,7 +43,7 @@
                 if($row = mysqli_fetch_array($loginSql))
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
-					echo '<script">
+					echo '<script type="text/javascript">
 						var x = document.getElementById("activate");
 						if(x.style.display == "none")
 						{
