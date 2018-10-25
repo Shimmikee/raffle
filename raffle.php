@@ -47,7 +47,16 @@
 
 <div id="activate" style="display:none;">
 <div class="raffleResult">
-		<h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1>
+        <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
+        <?php
+            require 'controller/config.php';
+            $Sql = "SELECT userid FROM tbl_users ORDER BY RAND()";
+            $quer = mysqli_query($db,$Sql);
+            if($row = mysqli_fetch_array($quer))
+            {
+                echo '<h1>'.$row['userid'].'</h1>';
+            }
+        ?>
 </div>
 </div>
 

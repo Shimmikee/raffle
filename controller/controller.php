@@ -54,4 +54,10 @@
 
         mysqli_close($db);
     }
+
+    function randUser()
+    {
+        require 'config.php';
+        
+    }
 ?>
