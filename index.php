@@ -20,7 +20,7 @@
 	?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber" placeholder="ID Number">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID"  onclick= "activator()" class="login login-submit" value="Check">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="Check">
 		<div id="activate" style="display:none;">
 			<input type="text" name="penName" placeholder="Pen Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
@@ -45,7 +45,6 @@
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
 					echo '<script type="text/js">
-						function activator(){
 							var x = document.getElementById("activate");
 							if(x.style.display == "none")
 							{
@@ -53,7 +52,6 @@
 							} else {
 								x.style.display = "none";
 							}
-						}
 					</script>';
                 }else
                 {
