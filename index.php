@@ -19,7 +19,7 @@
 	?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber" placeholder="ID Number">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="Check">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID"  onclick = "activator()" class="login login-submit" value="Check">
 		<div id="activate">
 			<input type="text" name="penName" placeholder="Pen Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
@@ -43,15 +43,7 @@
                 if($row = mysqli_fetch_array($loginSql))
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
-					echo '<script type="text/javascript">
-						var x = document.getElementById("activate");
-						if(x.style.display == "none")
-						{
-							x.style.display = "block";
-						} else {
-							x.style.display = "none";
-						}
-					</script>';
+					echo '<script src="script.js"></script>';
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
