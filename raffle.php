@@ -50,11 +50,14 @@
         <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
         <?php
             require 'controller/config.php';
-            $Sql = "SELECT userid FROM tbl_users ORDER BY RAND()";
+            $Sql = "SELECT userid,pen_name,status,remarks FROM tbl_users ORDER BY RAND() WHERE remarks = null ";
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
             {
-                echo '<h1>'.$row['userid'].'</h1>';
+                echo '<h1>'.$row['pen_name'].'</h1>';
+                echo '<h1>'.$row['pen_name'].'</h1>';
+                $upSQL = "UPDATE tbl_users SET remarks = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
+                $quers = mysqli_query($db,$upSQL);
             }
         ?>
 </div>
