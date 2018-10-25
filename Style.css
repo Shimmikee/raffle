@@ -77,14 +77,28 @@ body {
 	border: 0px;
 	color: #fff;
 	text-shadow: 0 1px rgba(0,0,0,0.1);
-	background-color: #728C00;
+	background-color: #ADA96E;
 	margin-top: 40px;
 }
 
 .login-submit:hover {
 	border: 0px;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
+	background-color: #C47451;
+}
+
+.login-entry {
+	border: 0px;
+	color: #fff;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
 	background-color: #C47451;;
+	margin-top: 40px;
+}
+
+.login-entry:hover {
+	border: 0px;
+	text-shadow: 0 1px rgba(0,0,0,0.3);
+	background-color: #ADA96E;
 }
 
 .login-card a {
