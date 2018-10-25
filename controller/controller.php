@@ -6,7 +6,9 @@
         {
             $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
             $penName = mysqli_real_escape_string($db,$_POST['penName']);
-            $loginSql = mysqli_query($db,"SELECT * FROM tbl_name WHERE userid = '$idNumber' AND pen_name = '$penName' ");
+            $wishList = mysqli_real_escape_string($db,$_POST['wishList']);
+            $loginQuery = "INSERT INTO tbl_users(userid,pen_name,wishlist,status) VALUES('$idNumber','$penName','$wishList','0')";
+            $loginSql = mysqli_query($db,$loginQuery);
             if($loginSql)
                 header('Location:raffle.html');
             else
