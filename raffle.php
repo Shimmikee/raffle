@@ -50,7 +50,8 @@
         <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
         <?php
             require 'controller/config.php';
-            $Sql = "SELECT userid,pen_name,status,remarks FROM tbl_users WHERE remarks = null  && ORDER BY RAND()";
+            $test = "";
+            $Sql = "SELECT userid,pen_name,status,remarks FROM tbl_users WHERE remarks =  '$test'  ORDER BY RAND() ";
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
             {
