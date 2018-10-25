@@ -109,8 +109,7 @@ body {
 
 #activate
 {
-<<<<<<< HEAD
-	display:none;
+	display:block;
 }
 
 /* Raffle Page */
@@ -243,7 +242,5 @@ button {
     color: #FFFFFF;
     text-align: center;
 } */
-=======
 	display:block;
 }
->>>>>>> 29f757ea7abbe2dfb94e7533b6b48214684d395c
