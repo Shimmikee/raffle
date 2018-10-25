@@ -14,6 +14,7 @@
 	<div class="login-card">
 		<h1>Christmas Celebration</h1>
 		<h2>Register now!</h2>
+	<?php eRegister(); checkID(); ?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber" placeholder="ID Number">
 		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="Check">
@@ -24,6 +25,6 @@
 		</div>
 		<input type="submit" name="login" class="login login-submit" value="Submit">
 	</form>
-	<?php eLogin(); ?>
+	
 </body>
 </html>
