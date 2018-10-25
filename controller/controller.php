@@ -18,8 +18,15 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
-                    echo '<script type="text/javascript">window.alert("DONE")</script>';
-                    header('Location:index.php');
+                    echo '<script type="text/javascript">
+                        var x = document.getElementById("activate");
+                        if(x.style.display == "none")
+                        {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    </script>';
                 }
             }
                 
