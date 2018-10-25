@@ -103,4 +103,12 @@ body {
 	width: 100%;
 	text-align: center;
 	font-size: 12px;
+<<<<<<< HEAD
+=======
+}
+
+#activate
+{
+	display:none;
+>>>>>>> baa7a3bef612faf7f9b42cdd20e02b8b3f285aef
 }
