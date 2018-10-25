@@ -20,6 +20,8 @@
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
     }
+
+    mysqli_close($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">

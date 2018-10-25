@@ -22,6 +22,7 @@
             }
                 
         }
+        mysqli_close($db);
     }
 
     function eLogin()
@@ -50,5 +51,7 @@
                 }
             }
         }
+
+        mysqli_close($db);
     }
 ?>
