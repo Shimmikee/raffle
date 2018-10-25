@@ -15,7 +15,8 @@
 		<h1>Christmas Celebration</h1>
 		<h2>Register now!</h2>
 	<form method="post">
-		<input type="text" name="idNumber" placeholder="ID Number">
+		<input style="width: 210px;" type="text" name="idNumber" placeholder="ID Number">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="Check">
 		<div id="activate">
 			<input type="text" name="penName" placeholder="Pen Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
