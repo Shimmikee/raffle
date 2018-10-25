@@ -104,3 +104,8 @@ body {
 	text-align: center;
 	font-size: 12px;
 }
+
+.activate
+{
+	display:none;
+}
