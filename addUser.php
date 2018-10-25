@@ -15,7 +15,7 @@
         }
         else
         {
-            $inserUser = "INSERT INTO tbl_users(userid,pen_name,wishlist,status) VALUES('$idNumber','0')";
+            $inserUser = "INSERT INTO tbl_users(userid,status) VALUES('$idNumber','0')";
             $quer = mysqli_query($db,$inserUser);
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
