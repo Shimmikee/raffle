@@ -19,26 +19,7 @@
             $quer = mysqli_query($db,$inserUser);
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
-
-        $sql = mysqli_query($db,"SELECT userid,pen_name,wishlist,status FROM tbl_users");
-        echo '
-             <table>
-                <tr>
-                    <th>ID NUMBER</th>
-                </tr>
-            ';
-        while($row = mysqli_fetch_array($sql))
-        {
-            echo '
-                    <tr>
-                        <td>'.$row['userid'].'</td>
-                    </tr>
-            ';
-        }
-        echo '</table>';
     }
-
-    mysqli_close($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
