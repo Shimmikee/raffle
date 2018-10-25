@@ -12,7 +12,7 @@
             if($loginSql)
                 header('Location:raffle.html');
             else
-                alert('Invalid userID / pen name');
+                echo '<script type="text/javascript">window.alert("Invalid userID / pen name")</script>';
                 header('Location:index.php');
         }
     }
