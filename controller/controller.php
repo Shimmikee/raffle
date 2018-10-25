@@ -38,7 +38,7 @@
             {
                 $loginQuery = "SELECT * FROM tbl_users WHERE userid = '$idNumber' ";
                 $loginSql = mysqli_query($db,$loginQuery);
-                if($loginSql)
+                if($row = mysqli_fetch_array($loginSql))
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
                     echo '<script src="../script.js"></script>';
