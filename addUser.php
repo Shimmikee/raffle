@@ -21,19 +21,21 @@
         }
 
         $sql = mysqli_query($db,"SELECT userid,pen_name,wishlist,status FROM tbl_users");
+        echo '
+             <table>
+                <tr>
+                    <th>ID NUMBER</th>
+                </tr>
+            ';
         while($row = mysqli_fetch_array($sql))
         {
             echo '
-                <table>
-                    <tr>
-                        <th>ID NUMBER</th>
-                    </tr>
                     <tr>
                         <td>'.$row['userid'].'</td>
                     </tr>
-                </table>
             ';
         }
+        echo '</table>';
     }
 
     mysqli_close($db);
