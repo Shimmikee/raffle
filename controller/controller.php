@@ -10,10 +10,9 @@
             $loginQuery = "INSERT INTO tbl_users(userid,pen_name,wishlist,status) VALUES('$idNumber','$penName','$wishList','0')";
             $loginSql = mysqli_query($db,$loginQuery);
             if($loginSql)
-                header('Location:raffle.html');
-            else
-                echo '<script type="text/javascript">window.alert("Invalid userID / pen name")</script>';
+                echo '<script type="text/javascript">window.alert("DONE")</script>';
                 header('Location:index.php');
+                
         }
     }
 ?>
