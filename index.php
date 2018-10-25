@@ -44,14 +44,8 @@
                 if($row = mysqli_fetch_array($loginSql))
                 {
                     //echo '<script type="text/javascript">window.alert("TEST")</script>';
-					echo '<script type="text/js">
-							var x = document.getElementById("activate");
-							if(x.style.display == "none")
-							{
-								x.style.display = "block";
-							} else {
-								x.style.display = "none";
-							}
+					echo '<script type="text/javascript">
+						document.getElementById("activate").style.display = "block";
 					</script>';
                 }else
                 {
