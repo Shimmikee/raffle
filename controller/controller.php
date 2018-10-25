@@ -42,13 +42,15 @@
                 if($loginSql)
                 {
                     echo '<script type="text/javascript">
-                            var x = document.getElementById("activate");
-                            if(x.style.display == "none")
-                            {
-                                x.style.display = "block";
-                            } else {
-                                x.style.display = "none";
-                            }
+                            $(document).ready(function(){
+                                var x = document.getElementById("activate");
+                                if(x.style.display == "none")
+                                {
+                                    x.style.display = "block";
+                                } else {
+                                    x.style.display = "none";
+                                }
+                            });
                     </script>';
                 }else
                 {
