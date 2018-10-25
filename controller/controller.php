@@ -13,7 +13,7 @@
             }
             else
             {
-                $loginQuery = "UPDATE tbl_users SET pen_name = '$penName' , whislist = '$wishList', status = '0' WHERE  userid = '$idNumber' ";
+                $loginQuery = "UPDATE tbl_users SET pen_name = '$penName' , wishlist = '$wishList', status = '0' WHERE  userid = '$idNumber' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
