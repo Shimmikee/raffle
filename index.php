@@ -26,7 +26,7 @@
 			<input type="text" name="penName" placeholder="Pen Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
 			<textarea style="resize:none; font-family: Verdana, sans-serif; padding: 6px; font-size: 16px;"  name="wishList" id="" cols="27" rows="10" placeholder="Wishlist (Ex. Item1, Item2, Item3...)"></textarea>
-			<input type="submit" name="login" class="login login-submit" value="Submit"> 
+			<input type="submit" name="register" class="login login-submit" value="Submit"> 
 		</div>
 		<input type="submit" name="entryLogin" class="login login-entry" value="Login">
 	</form>
