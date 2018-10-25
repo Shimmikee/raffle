@@ -27,7 +27,7 @@
     function eLogin()
     {
         require 'config.php';
-        if(isset($_POST['login']))
+        if(isset($_POST['entryLogin']))
         {
             $idNumber = $_POST['idNumber'];
             $penName = $_POST['penName'];
