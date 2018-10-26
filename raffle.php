@@ -55,8 +55,9 @@
         <?php
 
             require 'controller/config.php';
+            $a = $_SESSION['idNumber'];
             $test = "";
-            $Sql = "SELECT userid,pen_name,wishlist,status,remarks FROM tbl_users WHERE remarks =  '$test' AND userid != {$_SESSION['idNumber']}  ORDER BY RAND() ";
+            $Sql = "SELECT userid,pen_name,wishlist,status,remarks FROM tbl_users WHERE remarks =  '$test' AND userid != '$a'  ORDER BY RAND() ";
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
             {
