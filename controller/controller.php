@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    
     function eRegister()
     {
         require 'config.php';
@@ -28,6 +28,7 @@
 
     function eLogin()
     {
+        session_start();
         require 'config.php';
         if(isset($_POST['entryLogin']))
         {
