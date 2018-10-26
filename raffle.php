@@ -95,12 +95,12 @@
 </div>
 </div>
 
-<script>
+<!-- <script>
     function myFunction(){
         document.getElementById("activate").style.display = "block";
     }
 
-</script>
+</script> -->
 
 </body>
 </html>
