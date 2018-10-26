@@ -48,8 +48,8 @@
 <div id="activate" style="display:none;">
 <div class="raffleResult">
         <?php
-            //include 'controller/controller.php';
-            require 'controller/config.php';
+            include 'controller/controller.php';
+            //require 'controller/config.php';
             elogin();
             // $test = "";
             // $Sql = "SELECT * FROM tbl_users WHERE remarks = '$test' ORDER BY RAND()";
