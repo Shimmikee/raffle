@@ -62,8 +62,15 @@
             {
                 echo '<h1>'.$row['pen_name'].'</h1>';
                 echo '<h1>'.$row['wishlist'].'</h1>';
-                $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
-                $quers = mysqli_query($db,$upSQL);
+                if($row['monitor_status'] == '0')
+                {
+                    $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
+                    $quers = mysqli_query($db,$upSQL);
+                }
+                else
+                {
+                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
+                }
             }
 
         ?>
