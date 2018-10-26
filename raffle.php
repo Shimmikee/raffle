@@ -41,14 +41,6 @@
 
 <img style="width:1000px;" src="eRaffle/border.png">
 
-<!-- <div class="dropdown">
-    <button class="dropbtn">Select Option</button>
-    <div class="dropdown-content">
-      <a href="#"><button onclick="myFunction()">Monito-Monita</button></a>
-      <a href="#"><button onclick="myFunction()">Bunutan-2018</button></a>
-    </div>
-</div> -->
-
 	<table height="400" align="center">
 				<tr>
 					<th style="background-color: #C47451;">SELECT OPTION</th>
