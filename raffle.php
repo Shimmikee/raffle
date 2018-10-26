@@ -70,8 +70,8 @@
             $query = mysqli_query($db,"SELECT * FROM tbl_users WHERE remarks = '$test'");
             if($rows = mysqli_fetch_array($query))
             {
-                echo '<h1>'.$row['pen_name'].'</h1>';
-                echo '<h1>'.$row['wishlist'].'</h1>';
+                echo '<h1>'.$rows['pen_name'].'</h1>';
+                echo '<h1>'.$rows['wishlist'].'</h1>';
             }
         ?>
 </div>
