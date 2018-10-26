@@ -69,7 +69,8 @@
                 }
                 else
                 {
-                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
+                    echo '<script type="text/javascript">window.alert("MAY NABUNOT KANA WAG KA PAULIT ULIT !")</script>';
+                    //echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
                 }
             }
 
