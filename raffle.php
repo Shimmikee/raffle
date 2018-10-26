@@ -54,7 +54,7 @@
             elogin();
             //session_start();
             $test = "";
-            $Sql = "SELECT userid,pen_name,wishlist,status,remarks,nabunot,hiling,monito_status,bunutan_2018 FROM tbl_users WHERE userid =  '{$_SESSION['idNumber']}' AND remarks = '$test'  ORDER BY RAND() ";
+            $Sql = "SELECT userid,pen_name,wishlist,status,remarks,nabunot,hiling,monito_status,bunutan_2018 FROM tbl_users WHERE ORDER BY RAND() ";
             //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
