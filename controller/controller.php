@@ -46,7 +46,7 @@
                 {
                     echo '<script type="text/javascript">window.alert('.$row['userid'].')</script>';
                     $_SESSION['idNumber'] = $row['userid'];
-                    header("Location:raffle.php");
+                    //header("Location:raffle.php");
                 }
                 else
                 {
