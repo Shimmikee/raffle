@@ -1,3 +1,7 @@
+<?php
+    include 'controller/controller.php';
+    elogin();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,9 +52,8 @@
 <div id="activate" style="display:none;">
 <div class="raffleResult">
         <?php
-            include 'controller/controller.php';
-            //require 'controller/config.php';
-            elogin();
+            
+            require 'controller/config.php';
             // $test = "";
             // $Sql = "SELECT * FROM tbl_users WHERE remarks = '$test' ORDER BY RAND()";
             // //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
