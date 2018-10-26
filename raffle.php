@@ -62,7 +62,7 @@
             {
                 echo '<h1>'.$row['pen_name'].'</h1>';
                 echo '<h1>'.$row['wishlist'].'</h1>';
-                $upSQL = "UPDATE tbl_users SET remarks = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
+                $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
                 $quers = mysqli_query($db,$upSQL);
             }
 
