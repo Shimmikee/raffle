@@ -55,8 +55,7 @@
         <?php
 
             require 'controller/config.php';
-            $a = $_SESSION['idNumber'];
-            //echo '<script type="text/javascript">window.alert('.$S_SESSION['idNumber'].')</script>';
+            echo '<script type="text/javascript">window.alert('.$S_SESSION['idNumber'].')</script>';
             $test = "";
             $Sql = "SELECT userid,pen_name,wishlist,status,remarks FROM tbl_users WHERE remarks = '$test'  ORDER BY RAND() ";
             $quer = mysqli_query($db,$Sql);
