@@ -1,4 +1,5 @@
 <?php
+    session_start();
     function eRegister()
     {
         require 'config.php';
@@ -43,6 +44,7 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
+                    $_SESSION['idNumber'] = $row['userid'];
                     header("Location:raffle.php");
                 }
                 else
@@ -58,6 +60,6 @@
     function randUser()
     {
         require 'config.php';
-        
+
     }
 ?>
