@@ -62,7 +62,7 @@
             {
                 echo '<h1>'.$row['pen_name'].'</h1>';
                 echo '<h1>'.$row['wishlist'].'</h1>';
-                if($row['monito_status'] == '0')
+                if($row['monito_status'] == 0)
                 {
                     $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
                     $quers = mysqli_query($db,$upSQL);
