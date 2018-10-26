@@ -206,9 +206,10 @@ table,td,th,tr
 {
 	background-color: #EDC9AF;
 	border: 2px solid #C47451;
-	padding: 20px;
+	padding: 10px;
 	color: white;
 	text-align: center;
+	font-size: 10px;
 }
 
 table
