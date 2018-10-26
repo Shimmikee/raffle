@@ -54,25 +54,18 @@
         <?php
             
             require 'controller/config.php';
-            // $test = "";
-            // $Sql = "SELECT * FROM tbl_users WHERE remarks = '$test' ORDER BY RAND()";
-            // //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
-            // $quer = mysqli_query($db,$Sql);
-            // if($row = mysqli_fetch_array($quer))
-            // {
-            //     echo '<h1>'.$row['pen_name'].'</h1>';
-            //     echo '<h1>'.$row['wishlist'].'</h1>';
-            //     $upSQL = "UPDATE tbl_users SET remarks = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
-            //     $quers = mysqli_query($db,$upSQL);
-            // }
-
             $test = "";
-            $query = mysqli_query($db,"SELECT * FROM tbl_users WHERE remarks = '$test'");
-            if($rows = mysqli_fetch_array($query))
+            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid = '{$_SESSION['idNumber']}' ORDER BY RAND()";
+            //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
+            $quer = mysqli_query($db,$Sql);
+            if($row = mysqli_fetch_array($quer))
             {
-                echo '<h1>'.$rows['pen_name'].'</h1>';
-                echo '<h1>'.$rows['wishlist'].'</h1>';
+                echo '<h1>'.$row['pen_name'].'</h1>';
+                echo '<h1>'.$row['wishlist'].'</h1>';
+                $upSQL = "UPDATE tbl_users SET remarks = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
+                $quers = mysqli_query($db,$upSQL);
             }
+
         ?>
 </div>
 </div>
