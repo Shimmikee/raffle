@@ -64,7 +64,7 @@
             // }
 
             $test = "";
-            $query = mysqli_query($db,"SELECT * FROM tbl_users WHERE remarks = '$test' AND userid != '{$_SESSION['idNumber']}'");
+            $query = mysqli_query($db,"SELECT * FROM tbl_users WHERE remarks = '$test'");
             if($rows = mysqli_fetch_array($query))
             {
                 echo '<h1>'.$row['pen_name'].'</h1>';
