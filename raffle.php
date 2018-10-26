@@ -47,7 +47,6 @@
 
 <div id="activate" style="display:none;">
 <div class="raffleResult">
-        <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
         <?php
             include 'controller/controller.php';
             require 'controller/config.php';
