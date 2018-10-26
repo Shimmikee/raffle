@@ -48,7 +48,7 @@
 <div id="activate" style="display:none;">
 <div class="raffleResult">
         <?php
-            include 'controller/controller.php';
+            //include 'controller/controller.php';
             require 'controller/config.php';
             elogin();
             // $test = "";
