@@ -212,6 +212,11 @@ table,td,th,tr
 	font-size: 10px;
 }
 
+th
+{
+	font-size: 20px;
+}
+
 table
 {
 	margin-top: 20px;

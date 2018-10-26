@@ -50,6 +50,8 @@
 				<tr>
 					<td><button onclick="myFunction()">Monito-Monita</button></td>
 					<td>
+                        <script>
+                        function myFunction() {
                         <?php
                             require 'controller/config.php';
                             $test = "";
@@ -70,8 +72,12 @@
                                 }
                             }
                         ?>
+                        }
+                        </script>
                     </td>
 					<td>
+                        <script>
+                        function myFunction() {
                         <?php
                             require 'controller/config.php';
                             $test = "";
@@ -92,7 +98,8 @@
                                 }
                             }
                         ?>
-
+                        }
+                        </script>
                     </td>
 				</tr>
 				<tr>
