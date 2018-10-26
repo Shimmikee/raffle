@@ -55,7 +55,7 @@
             
             require 'controller/config.php';
             $test = "";
-            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid = '{$_SESSION['idNumber']}' ORDER BY RAND()";
+            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND()";
             //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
