@@ -62,6 +62,14 @@
             //     $upSQL = "UPDATE tbl_users SET remarks = '{$row['pen_name']}' WHERE pen_name = '{$row['pen_name']}' ";
             //     $quers = mysqli_query($db,$upSQL);
             // }
+
+            $test = "";
+            $query = mysqli_query($db,"SELECT * FROM tbl_users WHERE remarks = '$test' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ");
+            if($rows = mysqli_fetch_array($query))
+            {
+                echo '<h1>'.$row['pen_name'].'</h1>';
+                echo '<h1>'.$row['wishlist'].'</h1>';
+            }
         ?>
 </div>
 </div>
