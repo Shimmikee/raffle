@@ -1,8 +1,3 @@
-<?php
-    session_start();
-    include 'controller/controller.php';
-    elogin();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,11 +49,13 @@
 <div class="raffleResult">
         <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
         <?php
-
-            require 'controller/config.php';
-            echo '<script type="text/javascript">window.alert('.$S_SESSION['idNumber'].')</script>';
+            include 'controller/controller.php';
+            include 'controller/config.php';
+            elogin();
+            //session_start();
             $test = "";
-            $Sql = "SELECT userid,pen_name,wishlist,status,remarks FROM tbl_users WHERE remarks = '$test'  ORDER BY RAND() ";
+            $Sql = "SELECT userid,pen_name,wishlist,status,remarks FROM tbl_users WHERE remarks = '$test' AND userid =  '{$_SESSION['idNumber']}'  ORDER BY RAND() ";
+            echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
             $quer = mysqli_query($db,$Sql);
             if($row = mysqli_fetch_array($quer))
             {

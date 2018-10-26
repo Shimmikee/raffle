@@ -1,4 +1,6 @@
 <?php
+
+GLobal $idNumber;
     
     function eRegister()
     {
@@ -47,7 +49,7 @@
                 {
                     
                     $_SESSION['idNumber'] = $row['userid'];
-                    echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
+                    //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
                     header("Location:raffle.php");
                     
                 }
