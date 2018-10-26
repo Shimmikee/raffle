@@ -50,9 +50,8 @@
         <!-- <h1>Dito lalabas, lalabas lang to pag nagselect na ng option</h1> -->
         <?php
             include 'controller/controller.php';
-            include 'controller/config.php';
+            require 'controller/config.php';
             elogin();
-            //session_start();
             $test = "";
             $Sql = "SELECT userid,pen_name,wishlist,status,remarks,nabunot,hiling,monito_status,bunutan_2018 FROM tbl_users WHERE ORDER BY RAND() ";
             //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
