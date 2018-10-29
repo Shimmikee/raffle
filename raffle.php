@@ -88,7 +88,7 @@
                                 }
                                 else
                                 {
-                                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
+                                    echo '<h1>MAY NABUNOT KANA, WAG KA PAULIT ULIT !</h1>';
                                 }
                             }
                         ?>
@@ -96,7 +96,7 @@
                     </td>
 				</tr>
 				<tr>
-					<td><button onclick="myFunction()">Bunutan-2018</button></td>
+					<td><button onclick="myFunction()">Exchange Gift 2018</button></td>
 					<td></td>
 					<td></td>
 				</tr>
