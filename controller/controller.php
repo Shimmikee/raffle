@@ -69,7 +69,6 @@ GLobal $idNumber;
         require 'config.php';
         if(isset($_POST['btnMonito']))
         {
-            echo '<script type="text/javascript">window.alert("TEST");</script>';
             $monito_status = 0;
             $monito_remark = "no";
             $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
@@ -78,6 +77,7 @@ GLobal $idNumber;
             $rowStatus = mysqli_fetch_array($queryStatus);
             if($rowStatus['monito_status'] == $monito_status)
             {
+                echo '<script type="text/javascript">window.alert("TEST");</script>';
                 $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
                 FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid = '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);

@@ -45,6 +45,7 @@
     </form>
 	<table height="400">
 				<tr>
+                    <th>MONITO - MONITA</th>
 					<?php monitoRaffle(); ?>
 				</tr>
 		</table>
