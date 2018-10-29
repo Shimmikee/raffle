@@ -47,17 +47,6 @@
 				<tr>
 					<?php monitoRaffle(); ?>
 				</tr>
-					<!-- <td>
-                        <script>
-                        function myFunction() {
-                        }
-                        </script>
-                    </td> -->
-				<!-- <tr>
-					<td><button onclick="myFunction()">Bunutan-2018</button></td>
-					<td></td>
-					<td></td>
-				</tr> -->
 		</table>
 
 
