@@ -43,7 +43,7 @@ GLobal $idNumber;
             }
             else
             {
-                $loginQuery = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+                $loginQuery = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
                 FROM tbl_users WHERE userid = '$idNumber' AND user_status = '1' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
@@ -71,14 +71,14 @@ GLobal $idNumber;
         {
             $monito_status = 0;
             $monito_remark = "no";
-            $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+            $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
             FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
             $queryStatus = mysqli_query($db,$sqlMonito_Status);
             $rowStatus = mysqli_fetch_array($queryStatus);
             if($rowStatus['monito_status'] == $monito_status)
             {
                 
-                $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+                $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
                 FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
@@ -100,5 +100,41 @@ GLobal $idNumber;
             }
         }
 
+        function bunutanRaffle()
+        {
+        require 'config.php';
+        if(isset($_POST['btnBunutan']))
+        {
+            $bunutan_status = 0;
+            $bunutan_remark = "no";
+            $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
+            FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+            $queryStatus = mysqli_query($db,$sqlMonito_Status);
+            $rowStatus = mysqli_fetch_array($queryStatus);
+            if($rowStatus['monito_status'] == $monito_status)
+            {
+                
+                $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
+                FROM tbl_users WHERE bunutan_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $query_shuffle = mysqli_query($db,$Sql_shuffle);
+                if($row_shuffle = mysqli_fetch_array($query_shuffle))
+                {
+                    echo '<td>'.$row_shuffle['code_name'].'</td>';
+                    echo '<td>'.$row_shuffle['wishlist'].'</td>';
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET bunutan = '{$row_shuffle['code_name']}', bunutan_wishlist = '{$row_shuffle['wishlist']}', bunutan_status = '1' 
+                    WHERE userid = '{$_SESSION['idNumber']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET bunutan_remark = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+                }
+            }
+            else
+            {
+                echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
+            }
+            }
+        }
     }
 ?>
