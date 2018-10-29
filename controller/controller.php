@@ -111,7 +111,7 @@ GLobal $idNumber;
             FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
             $queryStatus = mysqli_query($db,$sqlMonito_Status);
             $rowStatus = mysqli_fetch_array($queryStatus);
-            if($rowStatus['monito_status'] == $monito_status)
+            if($rowStatus['bunutan_status'] == $bunutan_status)
             {
                 
                 $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
