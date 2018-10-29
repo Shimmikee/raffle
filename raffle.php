@@ -61,7 +61,7 @@
                             <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/>
                         </form>
                     </td>
-                        <?php monitoRaffle(); ?>
+                        <?php bunutanRaffle(); ?>
 				</tr>
 		</table>
 
