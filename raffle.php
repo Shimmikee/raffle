@@ -49,70 +49,18 @@
 				</tr>
 				<tr>
 					<td>
-<<<<<<< HEAD
-                        <?php
-                            require 'controller/config.php';
-                            $test = "";
-                            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND()";
-                            //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
-                            $quer = mysqli_query($db,$Sql);
-                            if($row = mysqli_fetch_array($quer))
-                            {
-                                echo '<h1>'.$row['pen_name'].'</h1>';
-                                if($row['monito_status'] == '0')
-                                {
-                                    $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
-                                    $quers = mysqli_query($db,$upSQL);
-                                }
-                                else
-                                {
-                                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
-                                }
-                            }
-                        ?>
-                    </td>
-					<td>
-                        <?php
-                            require 'controller/config.php';
-                            $test = "";
-                            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND()";
-                            //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
-                            $quer = mysqli_query($db,$Sql);
-                            if($row = mysqli_fetch_array($quer))
-                            {
-                                echo '<h1>'.$row['wishlist'].'</h1>';
-                                if($row['monito_status'] == '0')
-                                {
-                                    $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
-                                    $quers = mysqli_query($db,$upSQL);
-                                }
-                                else
-                                {
-                                    echo '<h1>MAY NABUNOT KANA, WAG KA PAULIT ULIT !</h1>';
-                                }
-                            }
-                        ?>
-
-=======
                         <form method="post">
                             <input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>
                         </form>
->>>>>>> 63fc4f1d85f7fe16c5c897f975a30d21d63f93f1
                     </td>
                         <?php monitoRaffle(); ?>
 				</tr>
 				<tr>
-<<<<<<< HEAD
-					<td><button onclick="myFunction()">Exchange Gift 2018</button></td>
-					<td></td>
-					<td></td>
-=======
 					<td>
                         <form method="post">
                             <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/>
                         </form>
                     </td>
->>>>>>> 63fc4f1d85f7fe16c5c897f975a30d21d63f93f1
 				</tr>
 		</table>
 
