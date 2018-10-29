@@ -43,42 +43,21 @@
     <form method="post">
         <input type="submit" value="Monito - Monita" name="btnMonito"/>
     </form>
-	<table height="400" align="center">
+	<table height="400">
 				<tr>
 					<?php monitoRaffle(); ?>
 				</tr>
 					<!-- <td>
                         <script>
                         function myFunction() {
-                        <?php
-                            require 'controller/config.php';
-                            $test = "";
-                            $Sql = "SELECT * FROM tbl_users WHERE nabunot = '$test' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND()";
-                            //echo '<script type="text/javascript">window.alert('.$_SESSION['idNumber'].')</script>';
-                            $quer = mysqli_query($db,$Sql);
-                            if($row = mysqli_fetch_array($quer))
-                            {
-                                echo '<h1>'.$row['wishlist'].'</h1>';
-                                if($row['monito_status'] == '0')
-                                {
-                                    $upSQL = "UPDATE tbl_users SET nabunot = '{$row['pen_name']}' , hiling = '{$row['wishlist']}', monito_status = '1' WHERE userid = '{$_SESSION['idNumber']}' ";
-                                    $quers = mysqli_query($db,$upSQL);
-                                }
-                                else
-                                {
-                                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
-                                }
-                            }
-                        ?>
                         }
                         </script>
                     </td> -->
-				</tr>
-				<tr>
+				<!-- <tr>
 					<td><button onclick="myFunction()">Bunutan-2018</button></td>
 					<td></td>
 					<td></td>
-				</tr>
+				</tr> -->
 		</table>
 
 
