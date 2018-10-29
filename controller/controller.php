@@ -43,7 +43,8 @@ GLobal $idNumber;
             }
             else
             {
-                $loginQuery = "SELECT userid,pen_name,wishlist,status FROM tbl_users WHERE userid = '$idNumber' AND status = '1' ";
+                $loginQuery = "SELECT userid,code_name,wishlist,user_stus,monito_monita,monito_wishlist,monito_remark,,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+                FROM tbl_users WHERE userid = '$idNumber' AND status = '1' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
