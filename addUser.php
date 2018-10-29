@@ -43,6 +43,8 @@
             echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
     }
 
+    mysqli_close($db);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
