@@ -79,7 +79,7 @@ GLobal $idNumber;
             {
                 
                 $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
-                FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid = '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
