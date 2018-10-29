@@ -50,15 +50,17 @@
 				<tr>
 					<td>
                         <form method="post">
-                            <input type="submit" value="Monito - Monita" name="btnMonito"/>
+                            <input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>
                         </form>
                     </td>
                         <?php monitoRaffle(); ?>
 				</tr>
 				<tr>
-					<td><button onclick="myFunction()">Bunutan-2018</button></td>
-					<td></td>
-					<td></td>
+					<td>
+                        <form method="post">
+                            <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/>
+                        </form>
+                    </td>
 				</tr>
 		</table>
 
