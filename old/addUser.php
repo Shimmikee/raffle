@@ -15,7 +15,7 @@
         }
         else
         {
-            $inserUser = "INSERT INTO tbl_users(userid,user_status,monito_remark,monito_status,bunutan_status) VALUES('$idNumber','0','no','0','0')";
+            $inserUser = "INSERT INTO tbl_users(userid,status) VALUES('$idNumber','0')";
             $quer = mysqli_query($db,$inserUser);
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
@@ -53,7 +53,7 @@
     </form>
     <?php
         require 'controller/config.php';
-        $sql = mysqli_query($db,"SELECT userid,code_name,wishlist,user_status FROM tbl_users");
+        $sql = mysqli_query($db,"SELECT userid,pen_name,wishlist,status FROM tbl_users");
         echo '
              <table>
                 <tr>

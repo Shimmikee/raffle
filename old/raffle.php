@@ -48,8 +48,10 @@
 					<th width="400" style="background-color: #C47451;">WISHLIST</th>
 				</tr>
 				<tr>
+					<td><button onclick="myFunction()">Monito-Monita</button></td>
 					<td>
-<<<<<<< HEAD
+                        <script>
+                        function myFunction() {
                         <?php
                             require 'controller/config.php';
                             $test = "";
@@ -70,8 +72,12 @@
                                 }
                             }
                         ?>
+                        }
+                        </script>
                     </td>
 					<td>
+                        <script>
+                        function myFunction() {
                         <?php
                             require 'controller/config.php';
                             $test = "";
@@ -88,31 +94,18 @@
                                 }
                                 else
                                 {
-                                    echo '<h1>MAY NABUNOT KANA, WAG KA PAULIT ULIT !</h1>';
+                                    echo '<h1>MAY NABUNOT KANA WAG KA PAULIT ULIT !</h1>';
                                 }
                             }
                         ?>
-
-=======
-                        <form method="post">
-                            <input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>
-                        </form>
->>>>>>> 63fc4f1d85f7fe16c5c897f975a30d21d63f93f1
+                        }
+                        </script>
                     </td>
-                        <?php monitoRaffle(); ?>
 				</tr>
 				<tr>
-<<<<<<< HEAD
-					<td><button onclick="myFunction()">Exchange Gift 2018</button></td>
+					<td><button onclick="myFunction()">Bunutan-2018</button></td>
 					<td></td>
 					<td></td>
-=======
-					<td>
-                        <form method="post">
-                            <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/>
-                        </form>
-                    </td>
->>>>>>> 63fc4f1d85f7fe16c5c897f975a30d21d63f93f1
 				</tr>
 		</table>
 

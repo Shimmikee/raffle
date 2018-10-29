@@ -16,7 +16,7 @@ GLobal $idNumber;
             }
             else
             {
-                $loginQuery = "UPDATE tbl_users SET pen_name = '$penName' , wishlist = '$wishList', status = '0' WHERE  userid = '$idNumber' ";
+                $loginQuery = "UPDATE tbl_users SET code_name = '$penName' , wishlist = '$wishList', user_status = '0' WHERE  userid = '$idNumber' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($loginSql)
                 {
@@ -43,7 +43,8 @@ GLobal $idNumber;
             }
             else
             {
-                $loginQuery = "SELECT userid,pen_name,wishlist,status FROM tbl_users WHERE userid = '$idNumber' AND status = '1' ";
+                $loginQuery = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+                FROM tbl_users WHERE userid = '$idNumber' AND user_status = '1' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
@@ -63,9 +64,41 @@ GLobal $idNumber;
         mysqli_close($db);
     }
 
-    function randUser()
+    function monitoRaffle()
     {
         require 'config.php';
+        if(isset($_POST['btnMonito']))
+        {
+            $monito_status = 0;
+            $monito_remark = "no";
+            $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+            FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+            $queryStatus = mysqli_query($db,$sqlMonito_Status);
+            $rowStatus = mysqli_fetch_array($queryStatus);
+            if($rowStatus['monito_status'] == $monito_status)
+            {
+                
+                $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_status 
+                FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $query_shuffle = mysqli_query($db,$Sql_shuffle);
+                if($row_shuffle = mysqli_fetch_array($query_shuffle))
+                {
+                    echo '<td>'.$row_shuffle['code_name'].'</td>';
+                    echo '<td>'.$row_shuffle['wishlist'].'</td>';
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_wishlist = '{$row_shuffle['wishlist']}', monito_status = '1' 
+                    WHERE userid = '{$_SESSION['idNumber']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+                }
+            }
+            else
+            {
+                echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
+            }
+        }
 
     }
 ?>
