@@ -96,7 +96,7 @@ GLobal $idNumber;
             }
             else
             {
-                echo '<script type="text/javascript">window.alert("Bunot is only once sarreh.");</script>';
+                echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
             }
         }
 
