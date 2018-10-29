@@ -66,6 +66,7 @@
              <table>
                 <tr>
                     <th>ID NUMBER</th>
+                    <th>USER STATUS</th>
                 </tr>
             ';
         while($row = mysqli_fetch_array($sql))
@@ -73,6 +74,7 @@
             echo '
                     <tr>
                         <td>'.$row['userid'].'</td>
+                        <td>'.$row['user_status'].'</td>
                     </tr>
             ';
         }
