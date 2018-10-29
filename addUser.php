@@ -38,17 +38,9 @@
 
     if(isset($_POST['ups']))
     {
-        $idNumber = $_POST['user'];
-        if(empty($idNumber))
-        {
-            echo '<script type="text/javascript">window.alert("Lagyan mo kaya ng LAMAN!")</script>';
-        }
-        else
-        {
             $delUser = "UPDATE tbl_users SET user_status = '1'";
             $quer = mysqli_query($db,$delUser);
             echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
-        }
     }
 
 ?>
@@ -65,7 +57,6 @@
         <input type="text" name="user" id="" placeholder="user">
         <input type="submit" name="add" value="Add">
         <input type="submit" name="del" value="Delete">
-        <input type="text" name="user_status" id="" placeholder="update to 1 user status">
         <input type="submit" name="ups" value="Update user status">
     </form>
     <?php
