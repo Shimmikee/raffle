@@ -40,13 +40,25 @@
 </div>
 
 <img style="width:1000px;" src="eRaffle/border.png">
-    <form method="post">
-        <input type="submit" value="Monito - Monita" name="btnMonito"/>
-    </form>
-	<table height="400">
+
+	<table height="400" align="center">
 				<tr>
-                    <th>MONITO - MONITA</th>
-					<?php monitoRaffle(); ?>
+					<th style="background-color: #C47451;">SELECT OPTION</th>
+					<th width="200" style="background-color: #C47451;">PEN NAME</th>
+					<th width="400" style="background-color: #C47451;">WISHLIST</th>
+				</tr>
+				<tr>
+					<td>
+                        <form method="post">
+                            <input type="submit" value="Monito - Monita" name="btnMonito"/>
+                        </form>
+                    </td>
+                        <?php monitoRaffle(); ?>
+				</tr>
+				<tr>
+					<td><button onclick="myFunction()">Bunutan-2018</button></td>
+					<td></td>
+					<td></td>
 				</tr>
 		</table>
 
