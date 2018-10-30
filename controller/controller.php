@@ -14,7 +14,7 @@ GLobal $idNumber;
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
             }
-            elseif($idNumber == " " && $penName == " " && $wishList == " ")
+            if($idNumber == " " && $penName == " " && $wishList == " ")
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
             }
