@@ -51,7 +51,11 @@ GLobal $idNumber;
             {
                 echo '<script type="text/javascript">window.alert("ID MO HUY!")</script>';
             }
-            elseif(empty($penName) && empty($wishList))
+            elseif(empty($penName))
+            {
+                echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
+            }
+            elseif(empty($wishList))
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
             }
