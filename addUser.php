@@ -2,7 +2,7 @@
     require 'controller/config.php';
     if(isset($_POST['add']))
     {
-        $idNumber = $_POST['idNumber'];
+        $idNumber = mysqli_real_escape_string($db,$_POST['user']);
         $checkRow = mysqli_query($db,"SELECT userid FROM tbl_users WHERE userid = '$idNumber'");
         $rows = mysqli_fetch_array($checkRow);
         if(empty($idNumber))
