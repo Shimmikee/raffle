@@ -58,7 +58,7 @@
 				<tr>
 					<td>
                         <form method="post">
-                            <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/>
+                            <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan" disabled/>
                         </form>
                     </td>
                         <?php bunutanRaffle(); ?>
