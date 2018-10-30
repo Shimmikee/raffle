@@ -36,7 +36,7 @@
 		require 'controller/config.php';
         if(isset($_POST['checkID']))
         {
-            $idNumber = $_POST['idNumber'];
+            $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
             if(empty($idNumber))
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';

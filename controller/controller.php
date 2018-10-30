@@ -7,9 +7,9 @@ GLobal $idNumber;
         require 'config.php';
         if(isset($_POST['register']))
         {
-            $idNumber = $_POST['idNumber'];
-            $penName = $_POST['penName'];
-            $wishList = $_POST['wishList'];
+            $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
+            $penName = mysqli_real_escape_string($db,$_POST['penName']);
+            $wishList = mysqli_real_escape_string($db,$_POST['wishList']);
             if(empty($idNumber) || $idNumber == null || $idNumber == '')
             {
                 echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
@@ -52,9 +52,9 @@ GLobal $idNumber;
         require 'config.php';
         if(isset($_POST['entryLogin']))
         {
-            $idNumber = $_POST['idNumber'];
-            $penName = $_POST['penName'];
-            $wishList = $_POST['wishList'];
+            $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
+            $penName = mysqli_real_escape_string($db,$_POST['penName']);
+            $wishList = mysqli_real_escape_string($db,$_POST['wishList']);
             if(empty($idNumber) && empty($penName) && empty($wishList))
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';

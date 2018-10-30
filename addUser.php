@@ -2,7 +2,7 @@
     require 'controller/config.php';
     if(isset($_POST['add']))
     {
-        $idNumber = $_POST['user'];
+        $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
         $checkRow = mysqli_query($db,"SELECT userid FROM tbl_users WHERE userid = '$idNumber'");
         $rows = mysqli_fetch_array($checkRow);
         if(empty($idNumber))
@@ -23,7 +23,7 @@
 
     if(isset($_POST['del']))
     {
-        $idNumber = $_POST['user'];
+        $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
         if(empty($idNumber))
         {
             echo '<script type="text/javascript">window.alert("Lagyan mo kaya ng LAMAN!")</script>';
