@@ -119,7 +119,7 @@ GLobal $idNumber;
                 $bunutan_query_shuffle = mysqli_query($db,$bunutan_Sql_shuffle);
                 if($bunutan_row_shuffle = mysqli_fetch_array($bunutan_query_shuffle))
                 {
-                    echo '<td>'.$bununtan_row_shuffle['code_name'].'</td>';
+                    echo '<td>'.$bunutan_row_shuffle['code_name'].'</td>';
                     echo '<td>'.$bunutan_row_shuffle['wishlist'].'</td>';
                     $updateBunutan = mysqli_query($db,"UPDATE tbl_users SET bunutan = '{$bunutan_row_shuffle['code_name']}', bunutan_wishlist = '{$bunutan_row_shuffle['wishlist']}', bunutan_status = '1' 
                     WHERE userid = '{$_SESSION['idNumber']}' ");
