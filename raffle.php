@@ -29,6 +29,7 @@
 					<th width="300" style="background-color: #EDC9AF;">WISHLIST</th>
 				</tr>
 				<tr>
+					<th style="background-color: #EDC9AF;"></th>
 					<td>
 						<form method="post">
 						<?php
