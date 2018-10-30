@@ -23,7 +23,7 @@
 
     if(isset($_POST['del']))
     {
-        $idNumber = mysqli_real_escape_string($db,$_POST['idNumber']);
+        $idNumber = mysqli_real_escape_string($db,$_POST['user']);
         if(empty($idNumber))
         {
             echo '<script type="text/javascript">window.alert("Lagyan mo kaya ng LAMAN!")</script>';
