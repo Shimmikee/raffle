@@ -15,7 +15,7 @@
         }
         else
         {
-            $inserUser = "INSERT INTO tbl_users(userid,user_status,monito_remark,monito_status,bunutan_status) VALUES('$idNumber','0','no','0','0')";
+            $inserUser = "INSERT INTO tbl_users(userid,user_status,monito_remark,monito_status,bunutan_remark,bunutan_status) VALUES('$idNumber','0','no','0','no','0')";
             $quer = mysqli_query($db,$inserUser);
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
@@ -69,6 +69,10 @@
                 <tr>
                     <th>ID NUMBER</th>
                     <th>USER STATUS</th>
+                    <th>MONITO STATUS</th>
+                    <th>MONITO REMARK</th>
+                    <th>BUNUTAN STATUS</th>
+                    <th>BUNUTAN REMARK</th>
                 </tr>
             ';
         while($row = mysqli_fetch_array($sql))
@@ -77,6 +81,10 @@
                     <tr>
                         <td>'.$row['userid'].'</td>
                         <td>'.$row['user_status'].'</td>
+                        <td>'.$row['monito_status'].'</td>
+                        <td>'.$row['monito_remark'].'</td>
+                        <td>'.$row['bunutan_status'].'</td>
+                        <td>'.$row['bunutan_remark'].'</td>
                     </tr>
             ';
         }
