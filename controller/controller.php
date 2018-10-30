@@ -16,11 +16,11 @@ GLobal $idNumber;
             }
             if(empty($penName) || $penName == null || $penName == '')
             {
-                echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
+                echo '<script type="text/javascript">window.alert("PEN NAME MO HUY")</script>';
             }
             if(empty($wishList) || $wishList == null || $wishList == '')
             {
-                echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
+                echo '<script type="text/javascript">window.alert("WISHLIST NAHIYA KAPA EH")</script>';
             }
             else
             {
