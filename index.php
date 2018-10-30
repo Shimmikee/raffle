@@ -47,6 +47,7 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
+					$_POST['idNumber'] = $row['userid'];
 					if($row['code_name'] == null || $row['code_name'] == '' && $row['wishlist'] == null || $row['wishlist'] == '')
 					{
 						echo '<script type="text/javascript">
