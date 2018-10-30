@@ -49,7 +49,7 @@
                 {
 					echo '<script type="text/javascript">
 							document.getElementById("idNumber").value = '.$row['userid'].';
-							document.getElementById("idNumber").readOnly;
+							document.getElementById("idNumber").readOnly = true;
 							document.getElementById("reg").style.display = "none";
 						</script>';
 					
