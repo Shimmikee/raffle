@@ -16,19 +16,19 @@ GLobal $idNumber;
             }
             else
             {
-                $selCode_name = mysqli_query($db,"SELECT userid,code_name FROM tbl_users WHERE code_name != '$penName' ");
+                $selCode_name = mysqli_query($db,"SELECT userid,code_name FROM tbl_users WHERE code_name = '$penName' ");
                 if($r = mysqli_fetch_array($selCode_name))
                 {
-                        $loginQuery = "UPDATE tbl_users SET code_name = '$penName' , wishlist = '$wishList', user_status = '0' WHERE  userid = '$idNumber'  ";
-                        $loginSql = mysqli_query($db,$loginQuery);
-                        if($loginSql)
-                        {
-                            echo '<script type="text/javascript">window.alert("Done")</script>';
-                        }    
+                    echo '<script type="text/javascript">window.alert("BAGAL MO EH NAUNAHAN KA TULOY!")</script>'; 
                 }
                 else
                 {
-                     echo '<script type="text/javascript">window.alert("BAGAL MO EH NAUNAHAN KA TULOY!")</script>';
+                     $loginQuery = "UPDATE tbl_users SET code_name = '$penName' , wishlist = '$wishList', user_status = '0' WHERE  userid = '$idNumber'  ";
+                    $loginSql = mysqli_query($db,$loginQuery);
+                    if($loginSql)
+                    {
+                        echo '<script type="text/javascript">window.alert("Done")</script>';
+                    }  
                 }
                 
                 
