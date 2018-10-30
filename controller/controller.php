@@ -47,15 +47,11 @@ GLobal $idNumber;
             $idNumber = $_POST['idNumber'];
             $penName = $_POST['penName'];
             $wishList = $_POST['wishList'];
-            if(empty($idNumber))
-            {
-                echo '<script type="text/javascript">window.alert("ID MO HUY!")</script>';
-            }
-            elseif(empty($penName))
+            if(empty($idNumber) && empty($penName) && empty($wishList))
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
             }
-            elseif(empty($wishList))
+            elseif($idNumber == " " && $penName == " " && $wishList == " ")
             {
                 echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
             }
