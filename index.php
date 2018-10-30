@@ -48,6 +48,8 @@
                 if($row = mysqli_fetch_array($loginSql))
                 {
 					echo '<script type="text/javascript">
+							document.getElementById("idNumber").value = '.$row['userid'].';
+							document.getElementById("idNumber").readOnly;
 							document.getElementById("reg").style.display = "none";
 						</script>';
 					
