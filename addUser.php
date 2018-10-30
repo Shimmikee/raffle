@@ -43,6 +43,14 @@
             echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
     }
 
+    if(isset($_POST['resets']))
+    {
+            $delUser = "UPDATE tbl_users SET user_status = '0' , code_name = '' , wishlist = '' , monito_monita = '' , monito_wishlist = '' , monito_status = '0' ,
+            monito_remark = 'no' ,bunutan = '' ,bunutan_wishlist = '' ,bununtan_wishlist = '' ,bunutan_remark = 'no' ,bunutan_status = '0' ,";
+            $quer = mysqli_query($db,$delUser);
+            echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
+    }
+
     mysqli_close($db);
 
 ?>
@@ -60,6 +68,7 @@
         <input type="submit" name="add" value="Add">
         <input type="submit" name="del" value="Delete">
         <input type="submit" name="ups" value="Update user status">
+        <input type="submit" name="resets" value="RESET ALL">
     </form>
     <?php
         require 'controller/config.php';
