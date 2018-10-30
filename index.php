@@ -21,7 +21,7 @@
 	?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber"  id="idNumber" placeholder="ID Number" pattern="[0-9]{7}">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" value="REGISTER">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" id="reg" value="REGISTER">
 		<div id="activate" style="display:none;">
 			<input type="text" name="penName" placeholder="Code Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
@@ -47,6 +47,9 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
+					echo '<script type="text/javascript">
+							document.getElementById("reg").style.display = "none";
+						</script>';
 					$_POST['idNumber'] = $row['userid'];
 					if($row['code_name'] == null || $row['code_name'] == '' && $row['wishlist'] == null || $row['wishlist'] == '')
 					{
