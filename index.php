@@ -47,10 +47,16 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
-                    //echo '<script type="text/javascript">window.alert("TEST")</script>';
-					echo '<script type="text/javascript">
-						document.getElementById("activate").style.display = "block";
-					</script>';
+					if($row['code_name'] != null || $row['code_name'] != '' && $row['wishlist'] != null || $row['wishlist'] != '')
+					{
+						echo '<script type="text/javascript">
+							document.getElementById("activate").style.display = "block";
+						</script>';
+					}
+					else
+					{
+						echo '<script type="text/javascript">window.alert("Already Set your Code Name and Wishlist!")</script>';
+					}
                 }else
                 {
                     echo '<script type="text/javascript">window.alert("Invalid ID Number")</script>';
