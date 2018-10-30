@@ -1,6 +1,7 @@
 <?php
     include 'controller/controller.php';
     elogin();
+    eLogout();
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,16 +72,9 @@
                     </td>
                         <?php bunutanRaffle(); ?>
 				</tr>
-		</table>
-
-
-
-<!-- <script>
-    function myFunction(){
-        document.getElementById("activate").style.display = "block";
-    }
-
-</script> -->
-
+        </table>
+        <form method="get">
+        <input style="padding: 10px; margin: 20px auto; display: block;" type="submit" value="Logout" name="btnLogout"/>
+        </form>
 </body>
 </html>

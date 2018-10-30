@@ -162,4 +162,16 @@ GLobal $idNumber;
     {
         require 'config.php';
     }
+
+    function eLogout()
+    {
+        if(isset($_GET['btnLogout']))
+        {
+            echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
+            session_destroy();
+            session_unset();
+            header('location:index.php');
+        }
+        mysqli_close($db);
+    }
 ?>
