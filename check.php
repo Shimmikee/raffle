@@ -32,7 +32,7 @@
 					<td>
                         <h1>MONITO - MONITA</h1>
                     </td>
-                        <?php monitoRaffle(); ?>
+                        <?php checkMonito(); ?>
 				</tr>
 				<tr>
 					<td>
@@ -41,15 +41,5 @@
                         <?php bunutanRaffle(); ?>
 				</tr>
 		</table>
-
-
-
-<!-- <script>
-    function myFunction(){
-        document.getElementById("activate").style.display = "block";
-    }
-
-</script> -->
-
 </body>
 </html>

@@ -157,4 +157,9 @@ GLobal $idNumber;
             }
         }
     }
+
+    function checkMonito()
+    {
+        require 'config.php';
+    }
 ?>

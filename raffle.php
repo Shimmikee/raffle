@@ -30,8 +30,21 @@
 				</tr>
 				<tr>
 					<td>
-                        <form method="post">
-                            <input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>
+						<form method="post">
+						<?php
+							require 'controller/config.php';
+							$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+							$quer = mysqli_query($db,$sql);
+							$row = mysqli_fetch_array($quer);
+							if($row['monito_status'] == 0)
+							{
+								echo '<input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>';
+							}
+							else
+							{
+								echo $row['monito_monita'];
+							}
+						?>
                         </form>
                     </td>
                         <?php monitoRaffle(); ?>
