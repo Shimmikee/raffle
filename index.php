@@ -20,8 +20,8 @@
 		eLogin();
 	?>
 	<form method="post">
-		<input style="width: 210px;" type="text" name="idNumber"  id="idNumber" placeholder="ID Number" pattern="[0-9]{7}">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" id="reg" value="CHECK">
+		<input style="width: 200px;" type="text" name="idNumber"  id="idNumber" placeholder="ID Number" pattern="[0-9]{7}">
+		<input style="background-color: #C47451; width: 70px; height: 42px; margin-top: -53px; margin-left: 203px;" type="submit" name="checkID" class="login login-submit" id="reg" value="CHECK">
 		<div id="activate" style="display:none;">
 			<input type="text" name="penName" placeholder="Code Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
