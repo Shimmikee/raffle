@@ -21,12 +21,12 @@
 	?>
 	<form method="post">
 		<input style="width: 210px;" type="text" name="idNumber"  id="idNumber" placeholder="ID Number" pattern="[0-9]{7}">
-		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" id="reg" value="REGISTER">
+		<input style="background-color: #C47451; width: 60px; height: 42px; margin-top: -53px; margin-left: 213px;" type="submit" name="checkID" class="login login-submit" id="reg" value="CHECK">
 		<div id="activate" style="display:none;">
 			<input type="text" name="penName" placeholder="Code Name" >
 			<!-- <input type="text" name="wishList" placeholder="Wishlist"> -->
 			<textarea style="resize:none; font-family: Verdana, sans-serif; padding: 6px; font-size: 16px;"  name="wishList" id="" cols="27" rows="10" placeholder="Wishlist (Ex. Item1, Item2, Item3...)"></textarea>
-			<input type="submit" name="register" class="login login-submit" value="Submit"> 
+			<input type="submit" name="register" class="login login-submit" value="REGISTER"> 
 		</div>
 		<input type="submit" name="entryLogin" class="login login-entry" value="Login">
 	</form>
@@ -50,7 +50,7 @@
 					echo '<script type="text/javascript">
 							document.getElementById("reg").style.display = "none";
 						</script>';
-					$_POST['idNumber'] = $row['userid'];
+					
 					if($row['code_name'] == null || $row['code_name'] == '' && $row['wishlist'] == null || $row['wishlist'] == '')
 					{
 						echo '<script type="text/javascript">
