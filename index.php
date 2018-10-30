@@ -47,14 +47,13 @@
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
-					echo '<script type="text/javascript">
+					if($row['code_name'] == null || $row['code_name'] == '' && $row['wishlist'] == null || $row['wishlist'] == '')
+					{
+						echo '<script type="text/javascript">
 							document.getElementById("idNumber").value = '.$row['userid'].';
 							document.getElementById("idNumber").readOnly = true;
 							document.getElementById("reg").style.display = "none";
 						</script>';
-					
-					if($row['code_name'] == null || $row['code_name'] == '' && $row['wishlist'] == null || $row['wishlist'] == '')
-					{
 						echo '<script type="text/javascript">
 							document.getElementById("activate").style.display = "block";
 						</script>';
