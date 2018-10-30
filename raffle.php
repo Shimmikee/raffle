@@ -51,8 +51,22 @@
 				</tr>
 				<tr>
 					<td>
-                        <form method="post">
-                            <input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan" disabled/>
+						<form method="post">
+							<?php
+								require 'controller/config.php';
+								$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+								$quer = mysqli_query($db,$sql);
+								$row = mysqli_fetch_array($quer);
+								if($row['bunutan_status'] == 0)
+								{
+									echo '<input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan" disabled/>';
+								}
+								else
+								{
+									echo 'PEN NAME : '.$row['bunutan'];
+									echo 'WISHLIST : '.$row['bunutan_wishlist'];
+								}
+							?>
                         </form>
                     </td>
                         <?php bunutanRaffle(); ?>
