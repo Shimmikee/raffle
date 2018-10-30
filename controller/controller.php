@@ -10,13 +10,17 @@ GLobal $idNumber;
             $idNumber = $_POST['idNumber'];
             $penName = $_POST['penName'];
             $wishList = $_POST['wishList'];
-            if(empty($wishList))
+            if(empty($idNumber) || $idNumber == null || $idNumber == '')
             {
-                echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
+                echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
             }
-            if($wishList == " ")
+            if(empty($penName) || $penName == null || $penName == '')
             {
-                echo '<script type="text/javascript">window.alert("Please fill out all field")</script>';
+                echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
+            }
+            if(empty($wishList) || $wishList == null || $wishList == '')
+            {
+                echo '<script type="text/javascript">window.alert("ID MO HUY")</script>';
             }
             else
             {
