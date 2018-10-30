@@ -43,7 +43,7 @@
 
 	<table height="400" align="center">
 				<tr>
-					<th style="background-color: #C47451;">SELECT OPTION</th>
+					<th style="background-color: #C47451;"></th>
 					<th width="200" style="background-color: #C47451;">PEN NAME</th>
 					<th width="400" style="background-color: #C47451;">WISHLIST</th>
 				</tr>
