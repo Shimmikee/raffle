@@ -9,25 +9,6 @@
     <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
 <style>
 
-.raffleResult {
-    display: block;
-	padding: 10px;
-    width: 270px;
-    height: 150px;
-	background-color: #EDC9AF;
-	margin: auto;
-	margin-top: 200px;
-	overflow: hidden;
-	opacity: 0.9;
-}
-
-.raffleResult h1 {
-	font-weight: 100;
-	text-align: center;
-	font-size: 1.0em;
-	color: #ffffff;
-}
-
 </style>    
 </head>     
 
@@ -43,9 +24,9 @@
 
 	<table height="400" align="center">
 				<tr>
-					<th style="background-color: #C47451;"></th>
-					<th width="150" style="background-color: #C47451;">PEN NAME</th>
-					<th width="300" style="background-color: #C47451;">WISHLIST</th>
+					<th style="background-color: #EDC9AF;"></th>
+					<th width="150" style="background-color: #EDC9AF;">PEN NAME</th>
+					<th width="300" style="background-color: #EDC9AF;">WISHLIST</th>
 				</tr>
 				<tr>
 					<td>

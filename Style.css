@@ -204,10 +204,10 @@ button {
 
 table,td,th,tr
 {
-	background-color: #EDC9AF;
-	border: 2px solid #C47451;
+	background-color: #ffffff;
+	border: 2px solid #EDC9AF;
 	padding: 10px;
-	color: white;
+	color: #C47451;
 	text-align: center;
 	font-size: 10px;
 }
@@ -220,13 +220,7 @@ th
 table
 {
 	margin-top: 20px;
-	border-radius: 5px;
+	border-radius: 10px;
 	opacity: 0.9;
 }
-
-th
-{
-	border-radius: 5px 5px 0px 0px;
-}
-
 
