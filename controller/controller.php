@@ -94,12 +94,7 @@ GLobal $idNumber;
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
                     echo '<td>'.$row_shuffle['code_name'].'</td>';
-<<<<<<< HEAD
                     $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_status = '1' 
-=======
-                    // echo '<td>'.$row_shuffle['wishlist'].'</td>';
-                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_wishlist = '{$row_shuffle['wishlist']}', monito_status = '1' 
->>>>>>> f82f0b9c0b53e946a40cdf1131d0fe3463141a5c
                     WHERE userid = '{$_SESSION['idNumber']}' ");
                     $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
                 }
