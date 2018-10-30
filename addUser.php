@@ -63,7 +63,7 @@
     </form>
     <?php
         require 'controller/config.php';
-        $sql = mysqli_query($db,"SELECT userid,code_name,wishlist,user_status FROM tbl_users");
+        $sql = mysqli_query($db,"SELECT userid,code_name,wishlist,user_status,monito_status,monito_remark,bunutan_status,bunutan_remark FROM tbl_users");
         echo '
              <table>
                 <tr>
