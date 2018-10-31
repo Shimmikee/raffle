@@ -78,7 +78,7 @@ GLobal $idNumber;
                 }
                 else
                 {
-                    echo '<script type="text/javascript">window.alert("Account is inactive. Please register first.")</script>';
+                    echo '<script type="text/javascript">window.alert("Account is inactive.")</script>';
                 }
             }
         }
