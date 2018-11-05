@@ -183,7 +183,17 @@ GLobal $idNumber;
             $count = 0;
             while($count <= 5)
             {
-
+                monitoRaffle();
+                if($count == 5)
+                {
+                    bunutanRaffle();
+                    $count = 6;
+                }
+                $count++;
+            }
+            if($count == 6)
+            {
+                echo '<script type="text/javascript">window.alert("Done.");</script>';
             }
         }
     }

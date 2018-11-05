@@ -26,6 +26,7 @@
 	<table height="400" align="center">
 				<tr>
                     <td>
+                        <?php jemina(); ?>
 						<form method="post">
 						<?php
 							require 'controller/config.php';
