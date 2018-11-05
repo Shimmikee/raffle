@@ -34,7 +34,7 @@
 							$row = mysqli_fetch_array($quer);
 							if($row['monito_status'] == 0)
 							{
-								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnMonito"/>';
+								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
 							}
 							else
 							{
