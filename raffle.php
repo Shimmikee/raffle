@@ -25,12 +25,7 @@
 
 	<table height="400" align="center">
 				<tr>
-					<th style="background-color: #EDC9AF;"></th>
-					<th width="150" style="background-color: #EDC9AF;">PEN NAME</th>
-					<th width="300" style="background-color: #EDC9AF;">WISHLIST</th>
-				</tr>
-				<tr>
-					<td>
+                    <td>
 						<form method="post">
 						<?php
 							require 'controller/config.php';
@@ -39,7 +34,7 @@
 							$row = mysqli_fetch_array($quer);
 							if($row['monito_status'] == 0)
 							{
-								echo '<input style="padding: 10px;" type="submit" value="Monito - Monita" name="btnMonito"/>';
+								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnMonito"/>';
 							}
 							else
 							{
@@ -49,29 +44,24 @@
                         </form>
                     </td>
                         <?php monitoRaffle(); ?>
-				</tr>
-				<tr>
-					<td>
-						<form method="post">
-							<?php
-								require 'controller/config.php';
-								$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-								$quer = mysqli_query($db,$sql);
-								$row = mysqli_fetch_array($quer);
-								if($row['bunutan_status'] == 0)
-								{
-									echo '<input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan" disabled/>';
-								}
-								else
-								{
-									echo 'PEN NAME : '.$row['bunutan'];
-									echo 'WISHLIST : '.$row['bunutan_wishlist'];
-								}
-							?>
-                        </form>
-                    </td>
-                        <?php bunutanRaffle(); ?>
-				</tr>
+                    <th width="150" style="background-color: #EDC9AF;">Pen Name</th>
+                    <th width="200" style="background-color: #EDC9AF;">Wishlist</th>
+                </tr>
+                <tr>
+                    <th width="150" style="background-color: #EDC9AF;">1st Week</th>
+                </tr>
+                <tr>
+                    <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
+                </tr>
+                <tr>
+                    <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
+                </tr>
+                <tr>
+                    <th width="150" style="background-color: #EDC9AF;">4th Week</th>
+                </tr>
+                <tr>
+                    <th width="150" style="background-color: #EDC9AF;">Bunutan 2018</th>
+                </tr>
         </table>
         <form method="get">
         <input style="padding: 10px; margin: 20px auto; display: block;" type="submit" value="Logout" name="btnLogout"/>
