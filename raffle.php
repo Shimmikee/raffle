@@ -50,24 +50,24 @@
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
-                    <th></th>
+                    <th style="border: 2px solid #ffffff;"></th>
                     <th rowspan="5"></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
-                    <th></th>
+                    <th style="border: 2px solid #ffffff;"></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
-                    <th></th>
+                    <th style="border: 2px solid #ffffff;"></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
-                    <th></th>
+                    <th style="border: 2px solid #ffffff;"></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">Bunutan 2018</th>
-                    <th></th>
+                    <th style="border: 2px solid #ffffff;"></th>
                 </tr>
         </table>
         <form method="get">
