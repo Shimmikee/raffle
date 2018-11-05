@@ -56,7 +56,7 @@
                         <p>Bunutan 2018 :<br/>
                         <p>Minimum of Php500.00</p>
                     </th>
-                    <?php echo '<th>MIKEE KO</th>'; //monitoRaffle();  ?>
+                    <?php echo '<th>MIKEE KO</th>'; echo '<th>MIKEE KO2</th>'; //monitoRaffle();  ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
