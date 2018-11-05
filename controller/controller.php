@@ -174,4 +174,17 @@ GLobal $idNumber;
         }
         mysqli_close($db);
     }
+
+    function jemina()
+    {
+        require 'config.php';
+        if(isset($_POST['btnClickme']))
+        {
+            $count = 0;
+            while($count <= 5)
+            {
+
+            }
+        }
+    }
 ?>
