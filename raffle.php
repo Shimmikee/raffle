@@ -39,7 +39,7 @@
 							}
 							else
 							{
-								echo 'PEN NAME : '.$row['monito_monita'];
+								echo 'Done'.$row['monito_monita'];
 							}
 						?>
                         </form>
