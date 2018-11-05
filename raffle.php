@@ -39,25 +39,24 @@
 							}
 							else
 							{
-								echo 'PEN NAME : '.$row['monito_monita'];
+								echo 'Done'.$row['monito_monita'];
 							}
 						?>
                         </form>
                     </td>
+                    <th width="150" style="background-color: #EDC9AF; ">Gift Worth</th>
                     <th width="150" style="background-color: #EDC9AF;">Pen Name</th>
                     <th width="200" style="background-color: #EDC9AF; ">Wishlist</th>
-                    <th width="150" style="background-color: #EDC9AF; ">Gift Worth</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
-                    <?php monitoRaffle(); ?>
-                    <th rowspan="5"></th>
                     <th rowspan="5">
                         <p>Monito-Monita:<br/>
                         <p>Minimum of Php100.00<br/>
                         <p>Bunutan 2018 :<br/>
                         <p>Minimum of Php500.00</p>
                     </th>
+                    <?php monitoRaffle(); ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
