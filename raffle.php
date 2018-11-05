@@ -50,7 +50,7 @@
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
-                    <?php monitoRaffle(); ?>
+                    <th><?php monitoRaffle(); ?></th>
                     <th rowspan="5"></th>
                     <th rowspan="5">
                         <p>Monito-Monita:<br/>
