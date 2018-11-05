@@ -30,7 +30,7 @@
 						<form method="post">
 						<?php
 							require 'controller/config.php';
-							$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+							//$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
 							$quer = mysqli_query($db,$sql);
 							$row = mysqli_fetch_array($quer);
 							if($row['monito_status'] == 0)
@@ -79,5 +79,30 @@
         <form method="get">
         <input style="padding: 10px; margin: 20px auto; display: block;" type="submit" value="Logout" name="btnLogout"/>
         </form>
+
+        
+        <h1>Countdown Clock</h1>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+
+
+
 </body>
 </html>

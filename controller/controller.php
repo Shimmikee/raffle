@@ -186,11 +186,11 @@ GLobal $idNumber;
                 if($count == 5)
                 {
                     bunutanRaffle();
-                    $count = 6;
+                    $count = 5;
                 }
                 $count++;
             }
-            if($count == 6)
+            if($count == 5)
             {
                 echo '<script type="text/javascript">window.alert("Done.");</script>';
             }
