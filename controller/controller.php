@@ -89,8 +89,7 @@ GLobal $idNumber;
     function monitoRaffle()
     {
         require 'config.php';
-        if(isset($_POST['btnMonito']))
-        {
+        
             $monito_status = 0;
             $monito_remark = "no";
             $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
@@ -119,14 +118,13 @@ GLobal $idNumber;
             {
                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
             }
-        }
+        
     }
 
     function  bunutanRaffle()
     {
         require 'config.php';
-        if(isset($_POST['btnBunutan']))
-        {
+        
             $bunutan_status = 0;
             $bunutan_remark = "no";
             $sqlBunutan_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
@@ -155,7 +153,7 @@ GLobal $idNumber;
             {
                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
             }
-        }
+        
     }
 
     function checkMonito()
