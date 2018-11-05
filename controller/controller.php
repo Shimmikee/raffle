@@ -163,6 +163,7 @@ GLobal $idNumber;
 
     function eLogout()
     {
+        require 'config.php';
         if(isset($_GET['btnLogout']))
         {
             echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
