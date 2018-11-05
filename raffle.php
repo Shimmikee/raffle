@@ -45,22 +45,28 @@
                     </td>
                         <?php monitoRaffle(); ?>
                     <th width="150" style="background-color: #EDC9AF;">Pen Name</th>
-                    <th width="200" style="background-color: #EDC9AF;">Wishlist</th>
+                    <th width="200" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
+                    <th></th>
+                    <th rowspan="5"></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">Bunutan 2018</th>
+                    <th></th>
                 </tr>
         </table>
         <form method="get">
