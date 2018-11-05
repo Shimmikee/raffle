@@ -47,7 +47,7 @@
                         <?php monitoRaffle(); ?>
                     <th width="150" style="background-color: #EDC9AF;">Pen Name</th>
                     <th width="200" style="background-color: #EDC9AF; ">Wishlist</th>
-                    <th width="150" style="background-color: #EDC9AF; ">Reminders</th>
+                    <th width="150" style="background-color: #EDC9AF; ">Gift Worth</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
