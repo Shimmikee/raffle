@@ -29,18 +29,18 @@
                         <?php jemina(); ?>
 						<form method="post">
 						<?php
-							require 'controller/config.php';
-							//$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							$quer = mysqli_query($db,$sql);
-							$row = mysqli_fetch_array($quer);
-							if($row['monito_status'] == 0)
-							{
-								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							}
-							else
-							{
-								echo 'Done'.$row['monito_monita'];
-							}
+							// require 'controller/config.php';
+							// //$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+							// $quer = mysqli_query($db,$sql);
+							// $row = mysqli_fetch_array($quer);
+							// if($row['monito_status'] == 0)
+							// {
+							// 	echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
+							// }
+							// else
+							// {
+							// 	echo 'Done'.$row['monito_monita'];
+							// }
 						?>
                         </form>
                     </td>
