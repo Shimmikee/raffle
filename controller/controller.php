@@ -89,28 +89,62 @@ GLobal $idNumber;
     {
         require 'config.php';
         
-            $monito_status = 0;
-            $monito_remark = "no";
+
+            $monito_status1 = 0;
+            $monito_status2 = 0;
+            $monito_status3 = 0;
+            $monito_status4 = 0;
+            $monito_remark1 = "no";
+            $monito_remark2 = "no";
+            $monito_remark3 = "no";
+            $monito_remark4 = "no";
+
             $sqlMonito_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
             $queryStatus = mysqli_query($db,$sqlMonito_Status);
             $rowStatus = mysqli_fetch_array($queryStatus);
-            if($rowStatus['monito_status'] == 1)
+
+            //FIRST WEEK
+
+            if(($rowStatus['monito_status1'] == 0) && ($rowStatus['monito_status2'] == 0) && ($rowStatus['monito_status3'] == 0) && ($rowStatus['monito_status4'] == 0))
             {
                 
-                $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark1 = '$monito_remark1' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
                     echo '<th>'.$row_shuffle['code_name'].'</th>';
-                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_status = '1'
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita1 = '{$row_shuffle['code_name']}', monito_status1 = '1'
                     WHERE userid = '{$_SESSION['idNumber']}' ");
-                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark1 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
                 }
                 else
                 {
                     echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
                 }
             }
+
+            //SECOND WEEK
+
+            // if(($rowStatus['monito_status1'] == 0) && ($rowStatus['monito_status2'] == 0) && ($rowStatus['monito_status3'] == 0) && ($rowStatus['monito_status4'] == 0))
+            // {
+                
+            //     $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark2 = '$monito_remark2' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+            //     $query_shuffle = mysqli_query($db,$Sql_shuffle);
+            //     if($row_shuffle = mysqli_fetch_array($query_shuffle))
+            //     {
+            //         echo '<th>'.$row_shuffle['code_name'].'</th>';
+            //         $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita2 = '{$row_shuffle['code_name']}', monito_status2 = '1'
+            //         WHERE userid = '{$_SESSION['idNumber']}' ");
+            //         $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark2 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+            //     }
+            //     else
+            //     {
+            //         echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+            //     }
+            // }
+
+
+
             else
             {
                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
@@ -171,61 +205,36 @@ GLobal $idNumber;
         mysqli_close($db);
     }
 
-<<<<<<< HEAD
-    function monito()
+//     function monito()
 
-    {
-    function jemina()
-{
-    require 'config.php';
-    if(isset($_POST['btnClickme']))
-         {
-             $count = 0;
-             while($count <= 5)
-             {
-                 monitoRaffle();
-                 if($count == 5)
-                 {
-                     bunutanRaffle();
-                     $count = 5;
-                 }
-                 $count++;
-             }
-             if($count == 5)
-             {
-                 echo '<script type="text/javascript">window.alert("Done.");</script>';
-             }
+//     {
+//     function jemina()
+// {
+//     require 'config.php';
+//     if(isset($_POST['btnClickme']))
+//          {
+//              $count = 0;
+//              while($count <= 5)
+             
+//                  monitoRaffle();
+//                  if($count == 5)
+//                  {
+//                      bunutanRaffle();
+//                      $count = 5;
+//                  }
+//                  $count++;
+//              }
+//              if($count == 5)
+//              {
+//                  echo '<script type="text/javascript">window.alert("Done.");</script>';
+//              }
 
 
-            //'btnClickme = 1stweek,2nd week,3rd week and 4th week 
-            //btn $bunutan_Sql_shuffle = "SELECT userid,code_name,user_status,monito_monita,monito_wishlist,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-           // FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+//             //'btnClickme = 1stweek,2nd week,3rd week and 4th week 
+//             //btn $bunutan_Sql_shuffle = "SELECT userid,code_name,user_status,monito_monita,monito_wishlist,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
+//            // FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
         
         
-        //}
-    }
-=======
-    // function jemina()
-    // {
-    //     require 'config.php';
-    //     if(isset($_POST['btnClickme']))
-    //     {
-    //         $count = 0;
-    //         while($count <= 5)
-    //         {
-    //             monitoRaffle();
-    //             if($count == 5)
-    //             {
-    //                 bunutanRaffle();
-    //                 $count = 5;
-    //             }
-    //             $count++;
-    //         }
-    //         if($count == 5)
-    //         {
-    //             echo '<script type="text/javascript">window.alert("Done.");</script>';
-    //         }
-    //     }
-    // }
->>>>>>> 4a99bfe98a7ed93a6b9d9e84283e4b96db8f9230
+//         //}
+//     }
 ?>

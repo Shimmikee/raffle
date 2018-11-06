@@ -99,7 +99,7 @@
                 <tr>
                     <th style="font-size: 15px;">
                         <p>Monito-Monita: Minimum of Php100.00<br/>
-                        <p>Bunutan 2018: Minimum of Php500.00</p>
+                        <p>Bunutan 2018: Minimum of Php500.00<br/>
                     </th>
                 </tr>
     </table>
