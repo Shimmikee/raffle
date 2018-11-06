@@ -45,7 +45,7 @@
 
     if(isset($_POST['resets']))
     {
-            $sdelUser = "UPDATE tbl_users SET user_status = '0' , code_name = '' , wishlist = '' , monito_wishlist = '' , monito_status = '0' ,
+            $sdelUser = "UPDATE tbl_users SET user_status = '0' , code_name = '' , wishlist = '', monito_wishlist = '' , monito_status = '0' ,
             monito_remark = 'no' ,bunutan = '' ,bunutan_wishlist = '' ,bunutan_remark = 'no' ,bunutan_status = '0'";
             $quer = mysqli_query($db,$sdelUser);
             echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
