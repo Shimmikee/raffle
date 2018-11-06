@@ -28,25 +28,55 @@
 
 	<table height="300" align="center">
 				<tr>
-                    <th width="150" style="background-color: #EDC9AF;"><input style="padding: 20px;" type="submit" value="Click Me" name="btnMonito"/></th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnMonito">Click Me</button></th>
+                </form>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
                     <th>Something 1</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
                     <th>Something 2</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
                     <th>Something 3</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
                     <th>Something 4</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
     </table>
     
