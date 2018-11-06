@@ -28,73 +28,67 @@
 
 	<table height="300" align="center">
 				<tr>
-                    <td>
-                        <?php jemina(); ?>
-						<form method="post">
-						<?php
-							// require 'controller/config.php';
-							// //$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							// $quer = mysqli_query($db,$sql);
-							// $row = mysqli_fetch_array($quer);
-							// if($row['monito_status'] == 0)
-							// {
-							// 	echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							// }
-							// else
-							// {
-							// 	echo 'Done'.$row['monito_monita'];
-							// }
-						?>
-                        </form>
-                    </td>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnMonito">Click Me</button></th>
+                </form>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
                     <th>Something 1</th>
-                    <?php jemina(); //monitoRaffle();  ?>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
                     <th>Something 2</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
                     <th>Something 3</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
                     <th>Something 4</th>
+                    <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnMonito']))
+                            {
+                                monitoRaffle();
+                            }
+                    ?>
                 </tr>
     </table>
     
     <table align="center">
+    
 				<tr>
-                    <td>
-                        <?php jemina(); ?>
-						<form method="post">
-						<?php
-							// require 'controller/config.php';
-							// //$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							// $quer = mysqli_query($db,$sql);
-							// $row = mysqli_fetch_array($quer);
-							// if($row['monito_status'] == 0)
-							// {
-							// 	echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							// }
-							// else
-							// {
-							// 	echo 'Done'.$row['monito_monita'];
-							// }
-						?>
-                        </form>
-                    </td>
+                    <th></th>
                     <th width="200" height="50" style="background-color: #EDC9AF;">Pen Name</th>
                     <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 30px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
+                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 20px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
                 </tr>
     </table>
 
