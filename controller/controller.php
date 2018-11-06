@@ -94,7 +94,7 @@ GLobal $idNumber;
             $sqlMonito_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
             $queryStatus = mysqli_query($db,$sqlMonito_Status);
             $rowStatus = mysqli_fetch_array($queryStatus);
-            if($rowStatus['monito_status'] == $monito_status)
+            if($rowStatus['monito_status'] == 1)
             {
                 
                 $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
@@ -102,7 +102,7 @@ GLobal $idNumber;
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
                     echo '<th>'.$row_shuffle['code_name'].'</th>';
-                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_status = '1' 
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita = '{$row_shuffle['code_name']}', monito_status = '1'
                     WHERE userid = '{$_SESSION['idNumber']}' ");
                     $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
                 }
