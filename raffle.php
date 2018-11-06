@@ -69,7 +69,7 @@
                 </tr>
     </table>
     
-    <table height="150" align="center">
+    <table align="center">
 				<tr>
                     <td>
                         <?php jemina(); ?>
@@ -90,11 +90,11 @@
 						?>
                         </form>
                     </td>
-                    <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
-                    <th width="300" style="background-color: #EDC9AF; ">Wishlist</th>
+                    <th width="200" height="50" style="background-color: #EDC9AF;">Pen Name</th>
+                    <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                    <th width="150" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
+                    <th width="150" height="200" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
                 </tr>
     </table>
 
