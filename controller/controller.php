@@ -178,27 +178,27 @@ GLobal $idNumber;
 
     function monito()
 
-    {}
-    // function jemina()
-    // //{
-    //     //require 'config.php';
-    //     //if(isset($_POST['btnClickme']))
-    //     {
-    //         $count = 0;
-    //         while($count <= 5)
-    //         {
-    //             monitoRaffle();
-    //             if($count == 5)
-    //             {
-    //                 bunutanRaffle();
-    //                 $count = 5;
-    //             }
-    //             $count++;
-    //         }
-    //         if($count == 5)
-    //         {
-    //             echo '<script type="text/javascript">window.alert("Done.");</script>';
-    //         //}
+    {
+    function jemina()
+{
+    require 'config.php';
+    if(isset($_POST['btnClickme']))
+         {
+             $count = 0;
+             while($count <= 5)
+             {
+                 monitoRaffle();
+                 if($count == 5)
+                 {
+                     bunutanRaffle();
+                     $count = 5;
+                 }
+                 $count++;
+             }
+             if($count == 5)
+             {
+                 echo '<script type="text/javascript">window.alert("Done.");</script>';
+             }
 
 
             //'btnClickme = 1stweek,2nd week,3rd week and 4th week 
@@ -206,6 +206,6 @@ GLobal $idNumber;
            // FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
         
         
-        }
+        //}
     }
 ?>
