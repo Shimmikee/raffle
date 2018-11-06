@@ -28,25 +28,7 @@
 
 	<table height="300" align="center">
 				<tr>
-                    <td>
-                        <?php monitoRaffle(); ?>
-						<form method="post">
-						<?php
-							require 'controller/config.php';
-							$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							$quer = mysqli_query($db,$sql);
-							$row = mysqli_fetch_array($quer);
-							if($row['monito_status'] == 0)
-							{
-								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							}
-							else
-							{
-								echo 'Done'.$row['monito_monita'];
-							}
-						?>
-                        </form>
-                    </td>
+                    <th width="150" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Click Me" name="btnMonito"/></th>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
@@ -69,34 +51,14 @@
     </table>
     
     <table align="center">
+    
 				<tr>
-                    <td>
-						<form method="post">
-						<?php
-							// require 'controller/config.php';
-							// //$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							// $quer = mysqli_query($db,$sql);
-							// $row = mysqli_fetch_array($quer);
-							// if($row['monito_status'] == 0)
-							// {
-							// 	echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							// }
-							// else
-							// {
-							// 	echo 'Done'.$row['monito_monita'];
-							// }
-						?>
-                        </form>
-                    </td>
+                    <th></th>
                     <th width="200" height="50" style="background-color: #EDC9AF;">Pen Name</th>
                     <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <th width="150" height="100" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
-=======
                     <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 30px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
->>>>>>> e00237a47ce753c1b87e1e71dff2b786a0699dff
                 </tr>
     </table>
 
