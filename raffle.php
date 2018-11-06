@@ -94,7 +94,7 @@
                     <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                    <th width="150" height="200" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
+                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 30px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
                 </tr>
     </table>
 
