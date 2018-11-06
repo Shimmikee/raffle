@@ -103,11 +103,9 @@
                     <th width="665" style="background-color: #EDC9AF;">Notes</th>
                 </tr>
                 <tr>
-                    <th>
-                        <p>Monito-Monita:<br/>
-                        <p>Minimum of Php100.00<br/>
-                        <p>Bunutan 2018:<br/>
-                        <p>Minimum of Php500.00</p>
+                    <th style="font-size: 15px;">
+                        <p>Monito-Monita: Minimum of Php100.00<br/>
+                        <p>Bunutan 2018: Minimum of Php500.00</p>
                     </th>
                 </tr>
     </table>
