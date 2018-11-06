@@ -8,17 +8,20 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css" media="screen" type="text/css" />
+    
 <style>
 
 </style>    
 </head>     
-
+<html>
 <body>
-  
+
 <div class ="backgroundBlock2"></div>
 	<div class ="backgroundBlock1"></div>
 <div class="titleBlock">
 	<div class="headertitle">2018 CHRISTMAS CELEBRATION</div>
+   
+
 </div>
 
 <img style="width:1000px;" src="eRaffle/border.png">
@@ -79,26 +82,8 @@
         <input style="padding: 10px; margin: 20px auto; display: block;" type="submit" value="Logout" name="btnLogout"/>
         </form>
 
+
         
-        <h1>Countdown Clock</h1>
-<div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
-  </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
-  </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-  </div>
-</div>
 
 
 
