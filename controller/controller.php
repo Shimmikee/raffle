@@ -176,26 +176,26 @@ GLobal $idNumber;
         mysqli_close($db);
     }
 
-    function jemina()
-    {
-        require 'config.php';
-        if(isset($_POST['btnClickme']))
-        {
-            $count = 0;
-            while($count <= 5)
-            {
-                monitoRaffle();
-                if($count == 5)
-                {
-                    bunutanRaffle();
-                    $count = 5;
-                }
-                $count++;
-            }
-            if($count == 5)
-            {
-                echo '<script type="text/javascript">window.alert("Done.");</script>';
-            }
-        }
-    }
+    // function jemina()
+    // {
+    //     require 'config.php';
+    //     if(isset($_POST['btnClickme']))
+    //     {
+    //         $count = 0;
+    //         while($count <= 5)
+    //         {
+    //             monitoRaffle();
+    //             if($count == 5)
+    //             {
+    //                 bunutanRaffle();
+    //                 $count = 5;
+    //             }
+    //             $count++;
+    //         }
+    //         if($count == 5)
+    //         {
+    //             echo '<script type="text/javascript">window.alert("Done.");</script>';
+    //         }
+    //     }
+    // }
 ?>
