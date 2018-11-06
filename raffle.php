@@ -29,21 +29,21 @@
 	<table height="300" align="center">
 				<tr>
                     <td>
-                        <?php jemina(); ?>
+                        <?php monitoRaffle(); ?>
 						<form method="post">
 						<?php
-							// require 'controller/config.php';
-							// //$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
-							// $quer = mysqli_query($db,$sql);
-							// $row = mysqli_fetch_array($quer);
-							// if($row['monito_status'] == 0)
-							// {
-							// 	echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
-							// }
-							// else
-							// {
-							// 	echo 'Done'.$row['monito_monita'];
-							// }
+							require 'controller/config.php';
+							$sql = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+							$quer = mysqli_query($db,$sql);
+							$row = mysqli_fetch_array($quer);
+							if($row['monito_status'] == 0)
+							{
+								echo '<input style="padding: 10px;" type="submit" value="Click Me" name="btnClickme"/>';
+							}
+							else
+							{
+								echo 'Done'.$row['monito_monita'];
+							}
 						?>
                         </form>
                     </td>
@@ -53,7 +53,6 @@
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
                     <th>Something 1</th>
-                    <?php jemina(); //monitoRaffle();  ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
@@ -72,7 +71,6 @@
     <table align="center">
 				<tr>
                     <td>
-                        <?php jemina(); ?>
 						<form method="post">
 						<?php
 							// require 'controller/config.php';
