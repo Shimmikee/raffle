@@ -24,7 +24,7 @@ GLobal $idNumber;
             }
             else
             {
-                $selCode_name = mysqli_query($db,"SELECT userid,code_name FROM tbl_users WHERE code_name = '$penName' ");
+                $selCode_name = mysqli_query($db,"SELECT * FROM tbl_users WHERE code_name = '$penName' ");
                 if($r = mysqli_fetch_array($selCode_name))
                 {
                     echo '<script type="text/javascript">window.alert("BAGAL MO EH NAUNAHAN KA TULOY!")</script>'; 
@@ -65,8 +65,7 @@ GLobal $idNumber;
             }
             else
             {
-                $loginQuery = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-                FROM tbl_users WHERE userid = '$idNumber' AND user_status = '1' ";
+                $loginQuery = "SELECT * FROM tbl_users WHERE userid = '$idNumber' AND user_status = '1' ";
                 $loginSql = mysqli_query($db,$loginQuery);
                 if($row = mysqli_fetch_array($loginSql))
                 {
@@ -92,15 +91,13 @@ GLobal $idNumber;
         
             $monito_status = 0;
             $monito_remark = "no";
-            $sqlMonito_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-            FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+            $sqlMonito_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
             $queryStatus = mysqli_query($db,$sqlMonito_Status);
             $rowStatus = mysqli_fetch_array($queryStatus);
             if($rowStatus['monito_status'] == $monito_status)
             {
                 
-                $Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-                FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark = '$monito_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
@@ -127,14 +124,12 @@ GLobal $idNumber;
             
                 $bunutan_status = 0;
                 $bunutan_remark = "no";
-                $sqlBunutan_Status = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-                FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+                $sqlBunutan_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
                 $bunutan_query = mysqli_query($db,$sqlBunutan_Status);
                 $rowBunutan = mysqli_fetch_array($bunutan_query);
                 if($rowBunutan['bunutan_status'] == $bunutan_status)
                 {
-                    $bunutan_Sql_shuffle = "SELECT userid,code_name,wishlist,user_status,monito_monita,monito_wishlist,monito_remark,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
-                    FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                    $bunutan_Sql_shuffle = "SELECT * FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                     $bunutan_query_shuffle = mysqli_query($db,$bunutan_Sql_shuffle);
                     if($bunutan_row_shuffle = mysqli_fetch_array($bunutan_query_shuffle))
                     {
