@@ -28,7 +28,7 @@
 
 	<table height="300" align="center">
 				<tr>
-                    <th width="150" style="background-color: #EDC9AF;"><input style="padding: 10px;" type="submit" value="Click Me" name="btnMonito"/></th>
+                    <th width="150" style="background-color: #EDC9AF;"><input style="padding: 20px;" type="submit" value="Click Me" name="btnMonito"/></th>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
@@ -58,7 +58,7 @@
                     <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 30px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
+                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 20px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
                 </tr>
     </table>
 
