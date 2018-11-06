@@ -176,26 +176,36 @@ GLobal $idNumber;
         mysqli_close($db);
     }
 
-    function jemina()
-    {
-        require 'config.php';
-        if(isset($_POST['btnClickme']))
-        {
-            $count = 0;
-            while($count <= 5)
-            {
-                monitoRaffle();
-                if($count == 5)
-                {
-                    bunutanRaffle();
-                    $count = 5;
-                }
-                $count++;
-            }
-            if($count == 5)
-            {
-                echo '<script type="text/javascript">window.alert("Done.");</script>';
-            }
+    function monito()
+
+    {}
+    // function jemina()
+    // //{
+    //     //require 'config.php';
+    //     //if(isset($_POST['btnClickme']))
+    //     {
+    //         $count = 0;
+    //         while($count <= 5)
+    //         {
+    //             monitoRaffle();
+    //             if($count == 5)
+    //             {
+    //                 bunutanRaffle();
+    //                 $count = 5;
+    //             }
+    //             $count++;
+    //         }
+    //         if($count == 5)
+    //         {
+    //             echo '<script type="text/javascript">window.alert("Done.");</script>';
+    //         //}
+
+
+            //'btnClickme = 1stweek,2nd week,3rd week and 4th week 
+            //btn $bunutan_Sql_shuffle = "SELECT userid,code_name,user_status,monito_monita,monito_wishlist,monito_status,bunutan,bunutan_wishlist,bunutan_remark,bunutan_status 
+           // FROM tbl_users WHERE bunutan_remark = '$bunutan_remark' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+        
+        
         }
     }
 ?>
