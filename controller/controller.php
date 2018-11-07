@@ -175,6 +175,95 @@ GLobal $idNumber;
 
     }
 
+    function monitoRaffle3()
+    {
+        require 'config.php';
+        
+
+            //$mon_stats1 = 0;
+            //$mon_stats2 = 0;
+            $mon_stats3 = 0;
+            // $mon_stats4 = 0;
+            //$mon_remark1 = "no";
+            //$mon_remark2 = "no";
+            $mon_remark3 = "no";
+            // $mon_remark4 = "no";
+
+            $sqlMonito_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+            $queryStatus = mysqli_query($db,$sqlMonito_Status);
+            $rowStatus = mysqli_fetch_array($queryStatus);
+            
+            //THIRD WEEK
+
+            if(($rowStatus['mon_stats1'] == 1) && ($rowStatus['mon_stats2'] == 1) && ($rowStatus['mon_stats3'] == 0))
+            {
+                
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE mon_remark3 = '$mon_remark3' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $query_shuffle = mysqli_query($db,$Sql_shuffle);
+                if($row_shuffle = mysqli_fetch_array($query_shuffle))
+                {
+                    echo '<th>'.$row_shuffle['code_name'].'</th>';
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monmon3 = '{$row_shuffle['code_name']}', mon_stats3 = '1'
+                    WHERE userid = '{$_SESSION['idNumber']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET mon_remark3 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+                }
+            }
+
+            if($rowStatus['mon_stats3'] == 1)
+            {
+                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
+            }
+
+    }
+
+    function monitoRaffle4()
+    {
+        require 'config.php';
+        
+
+            //$mon_stats1 = 0;
+            //$mon_stats2 = 0;
+            //$mon_stats3 = 0;
+            $mon_stats4 = 0;
+            //$mon_remark1 = "no";
+            //$mon_remark2 = "no";
+            //$mon_remark3 = "no";
+            $mon_remark4 = "no";
+
+            $sqlMonito_Status = "SELECT * FROM tbl_users WHERE userid = '{$_SESSION['idNumber']}' ";
+            $queryStatus = mysqli_query($db,$sqlMonito_Status);
+            $rowStatus = mysqli_fetch_array($queryStatus);
+            
+            //FOURTH WEEK
+
+            if(($rowStatus['mon_stats1'] == 1) && ($rowStatus['mon_stats2'] == 1) && ($rowStatus['mon_stats3'] == 1) && ($rowStatus['mon_stats4'] == 0))
+            {
+                
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE mon_remark4 = '$mon_remark4' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $query_shuffle = mysqli_query($db,$Sql_shuffle);
+                if($row_shuffle = mysqli_fetch_array($query_shuffle))
+                {
+                    echo '<th>'.$row_shuffle['code_name'].'</th>';
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monmon4 = '{$row_shuffle['code_name']}', mon_stats4 = '1'
+                    WHERE userid = '{$_SESSION['idNumber']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET mon_remark4 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+                }
+            }
+
+            if($rowStatus['mon_stats4'] == 1)
+            {
+                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
+            }
+
+    }
             // //SECOND WEEK
 
             // if(($rowStatus['mon_stats1'] == 1) && ($rowStatus['mon_stats2'] == 0) && ($rowStatus['mon_stats3'] == 0) && ($rowStatus['mon_stats4'] == 0))

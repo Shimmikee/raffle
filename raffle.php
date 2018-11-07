@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                 <form method="post">
-                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 10px;" name="btnMonito1">1st Week</button></th>
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 15px;" name="btnMonito1">1st Week</button></th>
                 </form>
                     <th style="font-size: 12px;">Something that makes a sound</th>
                     <?php
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                 <form method="post">
-                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 10px;" name="btnMonito2">2nd Week</button></th>
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 15px;" name="btnMonito2">2nd Week</button></th>
                 </form>
                     <th style="font-size: 12px;">Something green</th>
                     <?php
@@ -59,26 +59,30 @@
                     ?>
                 </tr>
                 <tr>
-                    <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 15px;" name="btnMonito3">3rd Week</button></th>
+                </form>
                     <th style="font-size: 12px;">Something reminiscent of childhood</th>
-                    <!-- <?php
+                    <?php
 		                require 'controller/config.php';
-                         if(isset($_POST['btnMonito']))
+                         if(isset($_POST['btnMonito3']))
                             {
-                                monitoRaffle();
+                                monitoRaffle3();
                             }
-                    ?> -->
+                    ?>
                 </tr>
                 <tr>
-                    <th width="150" style="background-color: #EDC9AF;">4th Week</th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 15px;" name="btnMonito4">4th Week</button></th>
+                </form>
                     <th style="font-size: 12px;">Something unbreakable</th>
-                    <!-- <?php
+                    <?php
 		                require 'controller/config.php';
-                         if(isset($_POST['btnMonito']))
+                         if(isset($_POST['btnMonito4']))
                             {
-                                monitoRaffle();
+                                monitoRaffle4();
                             }
-                    ?> -->
+                    ?>
                 </tr>
     </table>
     
