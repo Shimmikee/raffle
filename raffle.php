@@ -29,14 +29,14 @@
 	<table height="300" align="center">
 				<tr>
                 <form method="post">
-                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnMonito">Click Me</button></th>
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnMonito">Click Me Once</button></th>
                 </form>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">1st Week</th>
-                    <th>Something 1</th>
+                    <th style="font-size: 12px;">Something that makes a sound</th>
                     <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
-                    <th>Something 2</th>
+                    <th style="font-size: 12px;">Something green</th>
                     <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
-                    <th>Something 3</th>
+                    <th style="font-size: 12px;">Something reminiscent of childhood</th>
                     <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
-                    <th>Something 4</th>
+                    <th style="font-size: 12px;">Something unbreakable</th>
                     <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
@@ -83,15 +83,15 @@
     <table align="center">
     
 				<tr>
-                    <th></th>
-                    <th width="200" height="50" style="background-color: #EDC9AF;">Pen Name</th>
-                    <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
+                    <form method="post">
+                        <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnBunutan" disabled>Click Me Once</button></th>
+                    </form>
+                    <th width="200" height="70" style="background-color: #EDC9AF;">Pen Name</th>
+                    <th width="300" height="70" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                <form method="post">
-                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnBunutan">Bunutan 2018</button></th>
-                </form>
-                <?php
+                    <th height="70" style="background-color: #EDC9AF; font-size: 15px;">Bunutan 2018</th>
+                    <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnBunutan']))
                             {
@@ -106,7 +106,7 @@
                     <th width="665" style="background-color: #EDC9AF;">Notes</th>
                 </tr>
                 <tr>
-                    <th style="font-size: 15px;">
+                    <th style="font-size: 12px;">
                         <p>Monito-Monita: Minimum of Php100.00<br/>
                         <p>Bunutan 2018: Minimum of Php500.00<br/>
                     </th>
