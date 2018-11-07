@@ -123,6 +123,26 @@ GLobal $idNumber;
                 }
             }
 
+            //SECOND WEEK
+
+            if(($rowStatus['mon_stats1'] == 1) && ($rowStatus['mon_stats2'] == 0) && ($rowStatus['mon_stats3'] == 0) && ($rowStatus['mon_stats4'] == 0))
+            {
+                
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE mon_remark2 = '$mon_remark2' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $query_shuffle = mysqli_query($db,$Sql_shuffle);
+                if($row_shuffle = mysqli_fetch_array($query_shuffle))
+                {
+                    echo '<th>'.$row_shuffle['code_name'].'</th>';
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monmon2 = '{$row_shuffle['code_name']}', mon_stats2 = '1'
+                    WHERE userid = '{$_SESSION['idNumber']}' ");
+                    $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET mon_remark2 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
+                }
+                else
+                {
+                    echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
+                }
+            }
+
             else
             {
                 echo '<script type="text/javascript">window.alert("Sarreh. One bunot only.");</script>';
