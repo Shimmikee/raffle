@@ -28,55 +28,57 @@
 
 	<table height="300" align="center">
 				<tr>
-                <form method="post">
-                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnMonito">Click Me Once</button></th>
-                </form>
+                    <th width="150" style="background-color: #EDC9AF;"></th>
                     <th width="300" style="background-color: #EDC9AF; ">Category</th>
                     <th width="200" style="background-color: #EDC9AF;">Pen Name</th>
                 </tr>
                 <tr>
-                    <th width="150" style="background-color: #EDC9AF;">1st Week</th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 10px;" name="btnMonito1">1st Week</button></th>
+                </form>
                     <th style="font-size: 12px;">Something that makes a sound</th>
                     <?php
 		                require 'controller/config.php';
-                         if(isset($_POST['btnMonito']))
+                         if(isset($_POST['btnMonito1']))
                             {
-                                monitoRaffle();
+                                monitoRaffle1();
                             }
                     ?>
                 </tr>
                 <tr>
-                    <th width="150" style="background-color: #EDC9AF;">2nd Week</th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 10px;" name="btnMonito2">2nd Week</button></th>
+                </form>
                     <th style="font-size: 12px;">Something green</th>
                     <?php
 		                require 'controller/config.php';
-                         if(isset($_POST['btnMonito']))
+                         if(isset($_POST['btnMonito2']))
                             {
-                                monitoRaffle();
+                                monitoRaffle2();
                             }
                     ?>
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">3rd Week</th>
                     <th style="font-size: 12px;">Something reminiscent of childhood</th>
-                    <?php
+                    <!-- <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
                             {
                                 monitoRaffle();
                             }
-                    ?>
+                    ?> -->
                 </tr>
                 <tr>
                     <th width="150" style="background-color: #EDC9AF;">4th Week</th>
                     <th style="font-size: 12px;">Something unbreakable</th>
-                    <?php
+                    <!-- <?php
 		                require 'controller/config.php';
                          if(isset($_POST['btnMonito']))
                             {
                                 monitoRaffle();
                             }
-                    ?>
+                    ?> -->
                 </tr>
     </table>
     
