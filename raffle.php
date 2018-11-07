@@ -88,7 +88,16 @@
                     <th width="300" height="50" style="background-color: #EDC9AF; ">Wishlist</th>
                 </tr>
                 <tr>
-                    <th width="150" height="150" style="background-color: #EDC9AF;"><input style="padding: 20px;" type="submit" value="Bunutan 2018" name="btnBunutan"/></th>
+                <form method="post">
+                    <th width="150" style="background-color: #EDC9AF;"><button style="padding: 20px;" name="btnBunutan">Bunutan 2018</button></th>
+                </form>
+                <?php
+		                require 'controller/config.php';
+                         if(isset($_POST['btnBunutan']))
+                            {
+                                bunutanRaffle();
+                            }
+                    ?>
                 </tr>
     </table>
 
