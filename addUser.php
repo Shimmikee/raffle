@@ -15,7 +15,7 @@
         }
         else
         {
-            $inserUser = "INSERT INTO tbl_users(userid,user_status,monito_remark,monito_status,bunutan_remark,bunutan_status) VALUES('$idNumber','0','no','0','no','0')";
+            $inserUser = "INSERT INTO tbl_users(userid,user_status,mon_remark1,mon_stats1,mon_remark2,mon_stats2,bunutan_remark,bunutan_status) VALUES('$idNumber','0','no','0','no','0')";
             $quer = mysqli_query($db,$inserUser);
             echo '<script type="text/javascript">window.alert("AYIEEE PASOK NA!")</script>';
         }
@@ -45,8 +45,8 @@
 
     if(isset($_POST['resets']))
     {
-            $sdelUser = "UPDATE tbl_users SET user_status = '0' , code_name = '' , wishlist = '' , monito_status = '0' ,
-            monito_remark = 'no' ,bunutan = '' ,bunutan_wishlist = '' ,bunutan_remark = 'no' ,bunutan_status = '0'";
+            $sdelUser = "UPDATE tbl_users SET user_status = '0' , code_name = '' , wishlist = '' , mon_stats1 = '0' , mon_stats2 = '0' ,
+            mon_remark1 = 'no' ,mon_remark2 = 'no' ,bunutan = '' ,bunutan_wishlist = '' ,bunutan_remark = 'no' ,bunutan_status = '0'";
             $quer = mysqli_query($db,$sdelUser);
             echo '<script type="text/javascript">window.alert("UPDATE NA LAHAT AYIEEE!")</script>';
     }
@@ -72,14 +72,16 @@
     </form>
     <?php
         require 'controller/config.php';
-        $sql = mysqli_query($db,"SELECT userid,code_name,wishlist,user_status,monito_status,monito_remark,bunutan_status,bunutan_remark FROM tbl_users");
+        $sql = mysqli_query($db,"SELECT userid,code_name,wishlist,user_status,mon_stats1,mon_remark1,mon_stats2,mon_remark2,bunutan_status,bunutan_remark FROM tbl_users");
         echo '
              <table>
                 <tr>
                     <th>ID NUMBER</th>
                     <th>USER STATUS</th>
-                    <th>MONITO STATUS</th>
-                    <th>MONITO REMARK</th>
+                    <th>MONITO STATUS 1</th>
+                    <th>MONITO REMARK 1</th>
+                    <th>MONITO STATUS 2</th>
+                    <th>MONITO REMARK 2</th>
                     <th>BUNUTAN STATUS</th>
                     <th>BUNUTAN REMARK</th>
                 </tr>
@@ -90,8 +92,10 @@
                     <tr>
                         <td>'.$row['userid'].'</td>
                         <td>'.$row['user_status'].'</td>
-                        <td>'.$row['monito_status'].'</td>
-                        <td>'.$row['monito_remark'].'</td>
+                        <td>'.$row['mon_stats1'].'</td>
+                        <td>'.$row['mon_remark1'].'</td>
+                        <td>'.$row['mon_stats2'].'</td>
+                        <td>'.$row['mon_remark2'].'</td>
                         <td>'.$row['bunutan_status'].'</td>
                         <td>'.$row['bunutan_remark'].'</td>
                     </tr>

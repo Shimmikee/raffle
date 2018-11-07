@@ -90,10 +90,10 @@ GLobal $idNumber;
         require 'config.php';
         
 
-            $mon_status1 = 0;
-            $mon_status2 = 0;
-            $mon_status3 = 0;
-            $mon_status4 = 0;
+            $mon_stats1 = 0;
+            $mon_stats2 = 0;
+            $mon_stats3 = 0;
+            $mon_stats4 = 0;
             $mon_remark1 = "no";
             $mon_remark2 = "no";
             $mon_remark3 = "no";
@@ -105,15 +105,15 @@ GLobal $idNumber;
 
             //FIRST WEEK
 
-            if(($rowStatus['mon_status1'] == 0) && ($rowStatus['mon_status2'] == 0) && ($rowStatus['mon_status3'] == 0) && ($rowStatus['mon_status4'] == 0))
+            if(($rowStatus['mon_stats1'] == 0) && ($rowStatus['mon_stats2'] == 0) && ($rowStatus['mon_stats3'] == 0) && ($rowStatus['mon_stats4'] == 0))
             {
                 
-                $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark1 = '$mon_remark1' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
+                $Sql_shuffle = "SELECT * FROM tbl_users WHERE mon_remark1 = '$mon_remark1' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
                 $query_shuffle = mysqli_query($db,$Sql_shuffle);
                 if($row_shuffle = mysqli_fetch_array($query_shuffle))
                 {
                     echo '<th>'.$row_shuffle['code_name'].'</th>';
-                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monmon1 = '{$row_shuffle['code_name']}', mon_status1 = '1'
+                    $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monmon1 = '{$row_shuffle['code_name']}', mon_stats1 = '1'
                     WHERE userid = '{$_SESSION['idNumber']}' ");
                     $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET mon_remark1 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
                 }
@@ -122,28 +122,6 @@ GLobal $idNumber;
                     echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
                 }
             }
-
-            //SECOND WEEK
-
-            // if(($rowStatus['monito_status1'] == 0) && ($rowStatus['monito_status2'] == 0) && ($rowStatus['monito_status3'] == 0) && ($rowStatus['monito_status4'] == 0))
-            // {
-                
-            //     $Sql_shuffle = "SELECT * FROM tbl_users WHERE monito_remark2 = '$monito_remark2' AND userid != '{$_SESSION['idNumber']}' ORDER BY RAND() ";
-            //     $query_shuffle = mysqli_query($db,$Sql_shuffle);
-            //     if($row_shuffle = mysqli_fetch_array($query_shuffle))
-            //     {
-            //         echo '<th>'.$row_shuffle['code_name'].'</th>';
-            //         $updateMonito = mysqli_query($db,"UPDATE tbl_users SET monito_monita2 = '{$row_shuffle['code_name']}', monito_status2 = '1'
-            //         WHERE userid = '{$_SESSION['idNumber']}' ");
-            //         $updateMonito_remark = mysqli_query($db,"UPDATE tbl_users SET monito_remark2 = 'yes' WHERE userid = '{$row_shuffle['userid']}' ");
-            //     }
-            //     else
-            //     {
-            //         echo '<script type="text/javascript">window.alert("ERROR IN QUERY");</script>';
-            //     }
-            // }
-
-
 
             else
             {
