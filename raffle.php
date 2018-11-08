@@ -85,6 +85,17 @@
                     ?>
                 </tr>
     </table>
+
+        <!-- <form method="get">
+            <button style="padding: 10px; margin: 20px auto; display: block;" name="btnResult">Show Results</button>
+        </form>
+        <?php
+		    require 'controller/config.php';
+            if(isset($_POST['btnResult']))
+                {
+                    showResults();
+                }
+        ?> -->
     
     <table align="center">
     

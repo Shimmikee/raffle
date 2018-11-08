@@ -376,4 +376,33 @@ GLobal $idNumber;
         }
         mysqli_close($db);
     }
+
+    // function showResults()
+    // {
+    //     require 'controller/config.php';
+    //     $sql = mysqli_query($db,"SELECT monmon1, monmon2, monmon3, monmon4 FROM tbl_users");
+    // echo '
+    //      <table>
+    //         <tr>
+    //             <th>1st Week</th>
+    //             <th>Second Week</th>
+    //             <th>Third Week</th>
+    //             <th>Fourth Week</th>
+
+    //         </tr>
+    //     ';
+    // while($row = mysqli_fetch_array($sql))
+    // {
+    //     echo '
+    //             <tr>
+    //                 <td>'.$row['monmon1'].'</td>
+    //                 <td>'.$row['monmon2'].'</td>
+    //                 <td>'.$row['monmon3'].'</td>
+    //                 <td>'.$row['monmon4'].'</td>
+    //             </tr>
+    //     ';
+    // }
+    // echo '</table>';
+    // }
+
 ?>
